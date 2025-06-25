@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="30dp"
+    android:paddingTop="26dp"
+    android:paddingRight="30dp"
+    android:paddingBottom="32dp">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tv_vehicle_power_off"
+                    android:layout_width="190dp"
+                    android:layout_height="50dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/bg_segmented_btn"
+                    android:drawableStart="@drawable/ic_power_off"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
+                    android:paddingStart="30dp"
+                    android:text="@string/vehicle_power_off"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <ImageView
+                    android:id="@+id/iv_power_off_tips"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_tips" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="34dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/electronic_parking_mode"
+                    android:textColor="@color/title_text_color"
+                    android:textSize="22sp" />
+
+                <ImageView
+                    android:id="@+id/iv_electronic_parking_mode_tips"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginStart="15dp"
+                    android:src="@drawable/ic_tips" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_parking_mode"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="27dp"
+                android:layout_marginRight="16dp"
+                android:background="@drawable/bg_segmented_view"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_normal_mode"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingVertical="10dp"
+                    android:text="@string/normal_mode"
+                    android:textColor="@color/tab_unselect_text_color"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tv_maintain_mode"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/maintain_mode"
+                    android:textColor="@color/tab_unselect_text_color"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tv_trailer_mode"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/trailer_mode"
+                    android:textColor="@color/tab_unselect_text_color"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_tire_pressure_learning_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="37dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/tire_pressure_learning"
+                        android:textColor="@color/title_text_color"
+                        android:textSize="22sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_tire_pressure_learning_tips"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:src="@drawable/ic_tips" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_tire_pressure_learning"
+                    android:layout_width="190dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="27dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/bg_segmented_btn"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="@string/tire_pressure_learning"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_tire_pressure_reset_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="37dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/tire_pressure_reset"
+                        android:textColor="@color/title_text_color"
+                        android:textSize="22sp" />
+
+                    <ImageView
+                        android:id="@+id/iv_tire_pressure_reset_tips"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:src="@drawable/ic_tips" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_tire_pressure_reset"
+                    android:layout_width="190dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="27dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/bg_segmented_btn"
+                    android:gravity="center"
+                    android:padding="10dp"
+                    android:text="@string/tire_pressure_reset"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

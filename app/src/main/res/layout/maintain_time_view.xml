@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="27dp"
+    android:layout_marginBottom="38dp"
+    android:background="@drawable/bg_segmented_view"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/tv_maintain_time_0"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:paddingVertical="10dp"
+        android:text="OFF"
+        android:textColor="@color/tab_unselect_text_color"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv_maintain_time_3"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="3"
+        android:textColor="@color/tab_unselect_text_color"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv_maintain_time_6"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="6"
+        android:textColor="@color/tab_unselect_text_color"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv_maintain_time_9"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="9"
+        android:textColor="@color/tab_unselect_text_color"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv_maintain_time_12"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="12"
+        android:textColor="@color/tab_unselect_text_color"
+        android:textSize="18sp" />
+
+</LinearLayout>

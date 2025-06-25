@@ -1,0 +1,42 @@
+// Prebuilt libraries
+// ============================================================
+java_import {
+    name: "android.car-prebuilt-lib",
+    jars: ["app/libs/android.car.jar"],
+    product_specific: true,
+}
+
+java_import {
+    name: "client-prebuilt-lib",
+    jars: ["app/libs/client.jar"],
+    product_specific: true,
+}
+
+java_import {
+    name: "common-prebuilt-lib",
+    jars: ["app/libs/common.jar"],
+    product_specific: true,
+}
+
+// Main application module
+// ============================================================
+android_app {
+    name: "CarControl",
+    srcs: [
+        "app/src/main/java/**/*.java",
+    ],
+    resource_dirs: ["app/src/main/res"],
+    manifest: "app/src/main/AndroidManifest.xml",
+    sdk_version: "system_current",
+    certificate: "platform",
+    product_specific: true,
+    privileged: true,
+
+
+
+    static_libs: [
+        "android.car-prebuilt-lib",
+        "client-prebuilt-lib",
+        "common-prebuilt-lib",
+    ],
+}

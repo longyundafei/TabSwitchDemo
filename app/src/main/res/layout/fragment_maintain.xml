@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="30dp"
+    android:paddingTop="37dp"
+    android:paddingRight="30dp"
+    android:paddingBottom="20dp">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/maintain_time"
+                    android:textColor="@color/title_text_color"
+                    android:textSize="22sp" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:src="@drawable/ic_maintain_set" />
+
+                <TextView
+                    android:id="@+id/tv_maintain_set"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/maintenance_setting_permissions"
+                    android:textColor="@color/title_text_color"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <include layout="@layout/maintain_time_view" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/maintain_distance"
+                android:textColor="@color/title_text_color"
+                android:textSize="22sp" />
+
+            <include layout="@layout/maintain_mileage_view" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/switch_maintain_tips"
+                    android:layout_width="56dp"
+                    android:layout_height="31dp"
+                    android:src="@drawable/ic_switch_off" />
+
+                <TextView
+                    android:id="@+id/tv_maintain_tips"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:text="@string/maintain_tips"
+                    android:textColor="@color/title_text_color"
+                    android:textSize="22sp" />
+
+                <!--<com.suke.widget.SwitchButton
+                    android:id="@+id/switch_maintain_tips"
+                    android:layout_width="75dp"
+                    android:layout_height="45dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    app:sb_background="#1C2029"
+                    app:sb_checked="true"
+                    app:sb_checked_color="@color/theme_blue"
+                    app:sb_checkline_width="0dp"
+                    app:sb_show_indicator="false"
+                    app:sb_uncheck_color="#1C2029" />-->
+
+
+            </LinearLayout>
+
+            <!--<com.dld.view.SegmentedControlView
+                android:id="@+id/time_distance_scv"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="20dp"
+                app:segBackgroundColor="#15253F"
+                app:segCornersMode="Circle"
+                app:segScrollSelectEnabled="false"
+                app:segSelectedItem="0"
+                app:segSelectedItemBackgroundColor="@color/theme_blue"
+                app:segSelectedItemTextColor="@color/white"
+                app:segTextColor="@color/white"
+                app:segTextSize="20sp" />-->
+
+            <RadioGroup
+                android:id="@+id/time_distance_rg"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="26dp"
+                android:background="@drawable/bg_segmented_view"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_left"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/mem_bg_selector"
+                    android:button="@null"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:paddingVertical="10dp"
+                    android:text="@string/maintenance_mileage"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/rb_right"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/mem_bg_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:text="@string/maintenance_remaining_time"
+                    android:textColor="@color/tab_unselect_text_color"
+                    android:textSize="18sp" />
+
+            </RadioGroup>
+
+            <LinearLayout
+                android:id="@+id/ll_maintain_surplus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/iv_maintain"
+                    android:layout_width="85dp"
+                    android:layout_height="84dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/maintenance_one" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="9dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/the_vehicle_continues_to_move"
+                        android:textColor="@color/tab_unselect_text_color"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/tv_maintain_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:text="--"
+                        android:textColor="@color/theme_blue"
+                        android:textSize="24sp" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_surplus_hour"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/day"
+                            android:textColor="@color/tab_unselect_text_color"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/tv_surplus_hour"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="5dp"
+                            android:textColor="@color/theme_blue"
+                            android:textSize="24sp" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_time_or_distance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/kilometers_need_maintenance"
+                        android:textColor="@color/tab_unselect_text_color"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_exceed_maintain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/gantanhao" />
+
+                <TextView
+                    android:id="@+id/tv_exceed_maintain"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textColor="@color/tab_unselect_text_color"
+                    android:textSize="20sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

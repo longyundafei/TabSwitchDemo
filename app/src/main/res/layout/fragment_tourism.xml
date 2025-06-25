@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="30dp"
+    android:paddingTop="24dp"
+    android:paddingRight="30dp"
+    android:paddingBottom="20dp">
+
+    <!--<com.dld.view.SegmentedControlView
+        android:id="@+id/tourism_scv"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="30dp"
+        app:segBackgroundColor="#15253F"
+        app:segCornersMode="Circle"
+        app:segScrollSelectEnabled="false"
+        app:segSelectedItem="1"
+        app:segSelectedItemBackgroundColor="@color/theme_blue"
+        app:segSelectedItemTextColor="@color/white"
+        app:segTextColor="@color/white"
+        app:segTextSize="25sp" />-->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RadioGroup
+                android:id="@+id/tourism_rg"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/bg_segmented_view"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_first"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/mem_bg_selector"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:paddingVertical="10dp"
+                    android:text="@string/long_term_memory"
+                    android:textColor="@color/tab_unselect_text_color"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/rb_second"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/mem_bg_selector"
+                    android:button="@null"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:text="@string/short_term_memory"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+            </RadioGroup>
+
+            <LinearLayout
+                android:id="@+id/lin_long"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_tourism"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="45dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingTop="18dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/travel_mileage"
+                        android:textColor="@color/tab_unselect_text_color"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/tv_mileage_long"
+                        android:layout_width="113dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/invalid"
+                        android:textColor="@color/theme_blue"
+                        android:textSize="28sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:gravity="center_vertical"
+                        android:text="km"
+                        android:textColor="@color/tab_unselect_text_color"
+                        android:textSize="24sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="32dp"
+                    android:background="@drawable/ic_dotted_line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="71dp"
+                    android:layout_marginLeft="45dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="@string/travel_time"
+                        android:textColor="@color/tab_unselect_text_color"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/tv_time_day_long"
+                        android:layout_width="113dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/invalid"
+                        android:textColor="@color/theme_blue"
+                        android:textSize="28sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/day"
+                        android:textColor="@color/tab_unselect_text_color"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/tv_time_hour_long"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/invalid"
+                        android:textColor="@color/theme_blue"
+                        android:textSize="28sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/hour"
+                        android:textColor="@color/tab_unselect_text_color"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/tv_time_minutes_long"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/invalid"
+                        android:textColor="@color/theme_blue"
+                        android:textSize="28sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/minute"
+                        android:textColor="@color/tab_unselect_text_color"
+                        android:textSize="24sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="32dp"
+                    android:background="@drawable/ic_dotted_line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="71dp"
+                    android:layout_marginStart="45dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="@string/average_power_consumption"
+                        android:textColor="@color/tab_unselect_text_color"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/tv_power_long"
+                        android:layout_width="113dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/invalid"
+                        android:textColor="@color/theme_blue"
+                        android:textSize="28sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/unit_consumption"
+                        android:textColor="@color/tab_unselect_text_color"
+                        android:textSize="24sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="32dp"
+                    android:background="@drawable/ic_dotted_line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="81dp"
+                    android:layout_marginStart="45dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="@string/average_velocity_speed"
+                        android:textColor="@color/tab_unselect_text_color"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/tv_speed_long"
+                        android:layout_width="113dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/invalid"
+                        android:textColor="@color/theme_blue"
+                        android:textSize="28sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/unit_speed"
+                        android:textColor="@color/tab_unselect_text_color"
+                        android:textSize="24sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_reset_btn"
+                    android:layout_width="284dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="30dp"
+                    android:background="@drawable/bg_btn"
+                    android:gravity="center"
+                    android:text="@string/data_reset"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lin_short"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_tourism"
+                android:orientation="vertical"
+                android:paddingBottom="6dp"
+                android:visibility="visible">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginStart="45dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingTop="18dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="@string/travel_mileage"
+                        android:textColor="@color/tab_unselect_text_color"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/tv_mileage_short"
+                        android:layout_width="113dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/invalid"
+                        android:textColor="@color/theme_blue"
+                        android:textSize="28sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:gravity="center_vertical"
+                        android:text="km"
+                        android:textColor="@color/tab_unselect_text_color"
+                        android:textSize="24sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="32dp"
+                    android:background="@drawable/ic_dotted_line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="71dp"
+                    android:layout_marginLeft="45dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="@string/travel_time"
+                        android:textColor="@color/tab_unselect_text_color"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/tv_time_day_short"
+                        android:layout_width="113dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/invalid"
+                        android:textColor="@color/theme_blue"
+                        android:textSize="28sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/day"
+                        android:textColor="@color/tab_unselect_text_color"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/tv_time_hour_short"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/invalid"
+                        android:textColor="@color/theme_blue"
+                        android:textSize="28sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/hour"
+                        android:textColor="@color/tab_unselect_text_color"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/tv_time_minutes_short"
+                        android:layout_width="80dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/invalid"
+                        android:textColor="@color/theme_blue"
+                        android:textSize="28sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/minute"
+                        android:textColor="@color/tab_unselect_text_color"
+                        android:textSize="24sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="32dp"
+                    android:background="@drawable/ic_dotted_line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="71dp"
+                    android:layout_marginLeft="45dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="@string/average_power_consumption"
+                        android:textColor="@color/tab_unselect_text_color"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/tv_power_short"
+                        android:layout_width="113dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/invalid"
+                        android:textColor="@color/theme_blue"
+                        android:textSize="28sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/unit_consumption"
+                        android:textColor="@color/tab_unselect_text_color"
+                        android:textSize="24sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginEnd="32dp"
+                    android:background="@drawable/ic_dotted_line" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="81dp"
+                    android:layout_marginStart="45dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:text="@string/average_velocity_speed"
+                        android:textColor="@color/tab_unselect_text_color"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/tv_speed_short"
+                        android:layout_width="113dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/invalid"
+                        android:textColor="@color/theme_blue"
+                        android:textSize="28sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:gravity="center_vertical"
+                        android:text="@string/unit_speed"
+                        android:textColor="@color/tab_unselect_text_color"
+                        android:textSize="24sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

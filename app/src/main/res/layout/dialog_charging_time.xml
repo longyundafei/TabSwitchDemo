@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="474dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_dialog">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="@string/charging_start"
+        android:textColor="@color/title_text_color"
+        android:textSize="24sp" />
+
+    <LinearLayout
+        android:id="@+id/ll_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_title"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <NumberPicker
+            android:id="@+id/hourPicker"
+            android:layout_width="wrap_content"
+            android:layout_height="120dp"
+            android:selectionDividerHeight="0dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="120dp"
+            android:text="@string/hour_dialog"
+            android:textColor="@color/title_text_color"
+            android:textSize="18sp" />
+
+        <NumberPicker
+            android:id="@+id/minPicker"
+            android:layout_width="wrap_content"
+            android:layout_height="120dp"
+            android:selectionDividerHeight="0dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="20dp"
+            android:text="@string/minute_dialog"
+            android:textColor="@color/title_text_color"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_time"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tv_confirm"
+            android:layout_width="161dp"
+            android:layout_height="57dp"
+            android:background="@drawable/bg_btn_confirm"
+            android:gravity="center"
+            android:text="@string/confirm"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_cancel"
+            android:layout_width="161dp"
+            android:layout_height="57dp"
+            android:layout_marginStart="11dp"
+            android:background="@drawable/bg_btn_cancel"
+            android:gravity="center"
+            android:text="@string/cancel"
+            android:textColor="#ffffff"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</RelativeLayout>

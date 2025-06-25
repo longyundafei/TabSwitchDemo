@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000">
+
+    <RelativeLayout
+        android:layout_width="474dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <LinearLayout
+            android:layout_width="474dp"
+            android:layout_height="278dp"
+            android:background="@drawable/bg_fatigue"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="62dp"
+                android:layout_height="56dp"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/ic_warning" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:text="@string/is_complete_maintain"
+                android:textColor="@color/tab_unselect_text_color"
+                android:textSize="18sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="39dp"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tv_confirm"
+                    android:layout_width="161dp"
+                    android:layout_height="57dp"
+                    android:layout_marginEnd="11dp"
+                    android:background="@drawable/bg_btn_confirm"
+                    android:gravity="center"
+                    android:text="@string/confirm"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/tv_cancel"
+                    android:layout_width="161dp"
+                    android:layout_height="57dp"
+                    android:background="@drawable/bg_btn_cancel"
+                    android:gravity="center"
+                    android:text="@string/cancel"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_count_down_time"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="25dp"
+            android:background="@drawable/bg_count_down"
+            android:gravity="center"
+            android:text="30"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

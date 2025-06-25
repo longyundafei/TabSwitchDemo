@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nested_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="6dp"
+        android:layout_marginBottom="8dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="30dp"
+            android:paddingTop="30dp"
+            android:paddingRight="30dp"
+            android:paddingBottom="20dp">
+
+            <include
+                android:id="@+id/ll_light_control"
+                layout="@layout/light_control" />
+
+            <include layout="@layout/wiper_interval_view" />
+
+            <include layout="@layout/accompany_me_home_view" />
+
+            <include layout="@layout/key_backlight_brightness_view" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_unlock_when_parking"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/iv_unlock_when_parking"
+                        android:layout_width="56dp"
+                        android:layout_height="31dp"
+                        android:src="@drawable/ic_switch_on" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginEnd="16dp"
+                        android:text="@string/unlock_when_parking"
+                        android:textColor="@color/title_text_color"
+                        android:textSize="22sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/iv_unlock_tips"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_tips" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_welcome_to_unlock_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_welcome_to_unlock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/iv_welcome_to_unlock"
+                        android:layout_width="56dp"
+                        android:layout_height="31dp"
+                        android:src="@drawable/ic_switch_on" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginEnd="16dp"
+                        android:text="@string/welcome_to_unlock"
+                        android:textColor="@color/title_text_color"
+                        android:textSize="22sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/iv_welcome_to_unlock_tips"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_tips" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_away_from_blocking"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/iv_away_from_blocking"
+                        android:layout_width="56dp"
+                        android:layout_height="31dp"
+                        android:src="@drawable/ic_switch_on" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginEnd="16dp"
+                        android:text="@string/away_from_blocking"
+                        android:textColor="@color/title_text_color"
+                        android:textSize="22sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/iv_away_from_blocking_tips"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_tips" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_blocking_horn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/iv_blocking_horn"
+                        android:layout_width="56dp"
+                        android:layout_height="31dp"
+                        android:src="@drawable/ic_switch_on" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginEnd="16dp"
+                        android:text="@string/blocking_horn"
+                        android:textColor="@color/title_text_color"
+                        android:textSize="22sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/iv_blocking_horn_tips"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_tips" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_low_speed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/iv_low_speed"
+                        android:layout_width="56dp"
+                        android:layout_height="31dp"
+                        android:src="@drawable/ic_switch_on" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginEnd="16dp"
+                        android:text="@string/low_speed_pedestrian_warning"
+                        android:textColor="@color/title_text_color"
+                        android:textSize="22sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/iv_low_speed_tips"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_tips" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:gravity="center_vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_active_ventilation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/iv_active_ventilation"
+                        android:layout_width="56dp"
+                        android:layout_height="31dp"
+                        android:src="@drawable/ic_switch_on" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="28dp"
+                        android:layout_marginEnd="16dp"
+                        android:text="@string/active_ventilation"
+                        android:textColor="@color/title_text_color"
+                        android:textSize="22sp" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/iv_active_ventilation_tips"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_tips" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

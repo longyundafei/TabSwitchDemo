@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/ll_monday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_monday"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/ic_day_select"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_monday"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="21dp"
+            android:background="@drawable/bg_btn_rect_unselect"
+            android:gravity="center"
+            android:text="@string/tv_monday"
+            android:textColor="@color/title_text_color"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_tuesday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_tuesday"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/ic_day_unselect"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_tuesday"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="21dp"
+            android:background="@drawable/bg_btn_rect_unselect"
+            android:gravity="center"
+            android:text="@string/tv_tuesday"
+            android:textColor="@color/title_text_color"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_wednesday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_wednesday"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/ic_day_unselect"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_wednesday"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="21dp"
+            android:background="@drawable/bg_btn_rect_unselect"
+            android:gravity="center"
+            android:text="@string/tv_wednesday"
+            android:textColor="@color/title_text_color"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_thursday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_thursday"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/ic_day_unselect"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_thursday"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="21dp"
+            android:background="@drawable/bg_btn_rect_unselect"
+            android:gravity="center"
+            android:text="@string/tv_thursday"
+            android:textColor="@color/title_text_color"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_friday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_friday"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/ic_day_unselect"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_friday"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="21dp"
+            android:background="@drawable/bg_btn_rect_unselect"
+            android:gravity="center"
+            android:text="@string/tv_friday"
+            android:textColor="@color/title_text_color"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_saturday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_saturday"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/ic_day_unselect"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_saturday"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="21dp"
+            android:background="@drawable/bg_btn_rect_unselect"
+            android:gravity="center"
+            android:text="@string/tv_saturday"
+            android:textColor="@color/title_text_color"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_sunday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_sunday"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/ic_day_unselect"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tv_sunday"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:background="@drawable/bg_btn_rect_unselect"
+            android:gravity="center"
+            android:text="@string/tv_sunday"
+            android:textColor="@color/title_text_color"
+            android:textSize="20sp" />
+    </LinearLayout>
+</LinearLayout>
