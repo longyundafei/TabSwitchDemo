@@ -18,7 +18,7 @@
     <string name="economic_model">经济</string>
     <string name="unlock_when_parking">驻车自动解锁</string>
     <string name="low_speed_pedestrian_warning">低速行人报警</string>
-    <string name="the_vehicle_continues_to_move">车辆再行驶 </string>
+    <string name="the_vehicle_continues_to_move">车辆再行驶</string>
     <string name="kilometers_need_maintenance">" 公里需要保养"</string>
     <string name="hourly_maintenance_required">" 小时需要保养"</string>
     <string name="maintenance_mileage">保养剩余里程</string>
