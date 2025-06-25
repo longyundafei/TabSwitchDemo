@@ -4,7 +4,7 @@
     <string name="driving_mileage">Range Display</string>
     <string name="worm_mode">Creep Mode</string>
     <string name="maintain_time">Maintenance periods (month) </string>
-    <string name="maintain_distance">Maintenance schedule by mileages（km）</string>
+    <string name="maintain_distance">Maintenance schedule by mileages (km)</string>
     <string name="maintain_tips">Maintenance Reminder</string>
     <string name="invalid">--</string>
     <string name="unit_consumption">kWh/100km</string>
@@ -35,10 +35,10 @@
     <string name="clear">Clear</string>
     <string name="confirm">Confirm</string>
     <string name="cancel">Cancel</string>
-    <string name="clear_history_driving_data">Clear historical driving data？</string>
+    <string name="clear_history_driving_data">Clear historical driving data?</string>
     <string name="complete">Complete</string>
     <string name="please_maintain">Please maintain as soon as possible</string>
-    <string name="is_complete_maintain">Has the service been completed?？</string>
+    <string name="is_complete_maintain">Has the service been completed?</string>
     <string name="maintenance_setting_permissions">Only A/S personnel to operate </string>
     <string name="exceeding_maintenance_mileage">Your vehicle has passed the recommended service mileage.\n Schedule service now.</string>
     <string name="exceeding_maintenance_time">Service Overdue: Time-based service interval exceeded.\n Service required immediately.</string>

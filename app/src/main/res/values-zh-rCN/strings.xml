@@ -3,8 +3,8 @@
     <string name="dive_mode">潜水模式</string>
     <string name="driving_mileage">行驶里程数</string>
     <string name="worm_mode">蠕虫模式</string>
-    <string name="maintain_time">保养时间还剩（小时）</string>
-    <string name="maintain_distance">保养距离还剩（km）</string>
+    <string name="maintain_time">保养时间还剩(小时)</string>
+    <string name="maintain_distance">保养距离还剩(km)</string>
     <string name="maintain_tips">保养提醒</string>
     <string name="invalid">--</string>
     <string name="unit_consumption">kWh/100km</string>
