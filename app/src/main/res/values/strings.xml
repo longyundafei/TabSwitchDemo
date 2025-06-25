@@ -3,8 +3,8 @@
     <string name="dive_mode">驾驶模式</string>
     <string name="driving_mileage">续航里程显示</string>
     <string name="worm_mode">蠕行模式</string>
-    <string name="maintain_time">保养时间设置（月）</string>
-    <string name="maintain_distance">保养距离设置（km）</string>
+    <string name="maintain_time">保养时间设置(月)</string>
+    <string name="maintain_distance">保养距离设置(km)</string>
     <string name="maintain_tips">保养提醒</string>
     <string name="invalid">--</string>
     <string name="unit_consumption">kWh/100km</string>
@@ -35,10 +35,10 @@
     <string name="clear">清除</string>
     <string name="confirm">确认</string>
     <string name="cancel">取消</string>
-    <string name="clear_history_driving_data">是否清除历史行车数据？</string>
+    <string name="clear_history_driving_data">是否清除历史行车数据?</string>
     <string name="complete">完成</string>
     <string name="please_maintain">请尽快保养</string>
-    <string name="is_complete_maintain">是否已经完成保养？</string>
+    <string name="is_complete_maintain">是否已经完成保养?</string>
     <string name="maintenance_setting_permissions">保养设置权限仅限售后人员操作</string>
     <string name="exceeding_maintenance_mileage">累计车辆行驶里程已超过保养里程\n请尽快保养</string>
     <string name="exceeding_maintenance_time">累计车辆行驶时间已超过保养时间\n请尽快保养</string>
@@ -144,9 +144,9 @@
     <string name="lateral_warning_aid">侧向盲区辅助</string>
     <string name="forward_collision_warning_and_emergency_braking">前向碰撞预警及紧急制动</string>
     <string name="active_ventilation_tips">解锁车辆后，自动开启空调通风模式，打开车门或5分钟后自动停止</string>
-    <string name="collision_warning_braking_close">关闭“前向碰撞预警及紧急制动”后，即使发生前向碰撞风险，车辆将不再发出预警或制动。确认要关闭吗？</string>
-    <string name="collision_warning">确认要设置为“仅预警”吗？</string>
-    <string name="collision_braking">确认要设置为“仅制动”吗？</string>
+    <string name="collision_warning_braking_close">关闭"前向碰撞预警及紧急制动"后，即使发生前向碰撞风险，车辆将不再发出预警或制动。确认要关闭吗?</string>
+    <string name="collision_warning">确认要设置为"仅预警"吗?</string>
+    <string name="collision_braking">确认要设置为"仅制动"吗?</string>
     <string name="welcome_to_unlock_tips">功能打开后，钥匙接近车辆自动解锁</string>
     <string name="away_from_blocking_tips">功能打开后，当车辆检测到钥匙远离后自动闭锁</string>
     <string name="blocking_horn_tips">功能打开后，锁车成功后会鸣笛一声</string>
@@ -207,7 +207,7 @@
     <string name="norway">挪威</string>
     <string name="switzerland">瑞士</string>
     <string name="other">其他</string>
-    <string name="lcc_lane_keeping_open">此功能开启后，当激活车道居中辅助（LCC）时，\n车辆会辅助控制方向，保持在车道中间，确认要开启吗？</string>
-    <string name="open_lane_keeping_lcc">开启车道居中辅助（LCC）</string>
+    <string name="lcc_lane_keeping_open">此功能开启后，当激活车道居中辅助(LCC)时，\n车辆会辅助控制方向，保持在车道中间，确认要开启吗?</string>
+    <string name="open_lane_keeping_lcc">开启车道居中辅助(LCC)</string>
     <string name="please_set_charging_date">请及时设置预约充电时间，否则无法开启该功能！</string>
 </resources>
