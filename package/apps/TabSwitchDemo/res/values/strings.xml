@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- packages/apps/TabSwitchDemo/res/values/strings.xml -->
+<resources>
+    <string name="app_name">TabSwitchDemo</string>
+    <string name="tab_1">Tab 1</string>
+    <string name="tab_2">Tab 2</string>
+    <string name="tab_3">Tab 3</string>
+    <string name="confirm">确认</string>
+    <string name="cancel">取消</string>
+    <string name="waiting_for_confirmation">等待确认...</string>
+    <string name="current_active_tab_label">当前激活Tab:</string>
+    <string name="get_temp">Get Temp</string>
+</resources>
+

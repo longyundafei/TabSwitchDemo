@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- packages/apps/TabSwitchDemo/AndroidManifest.xml -->
+<!--
+    Android 应用清单文件。
+    声明应用的基本信息、组件和所需权限。
+-->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.android.tabswitchdemo"
+    android:sharedUserId="android.uid.system">
+    <!--
+        共享用户 ID (android.uid.system)：
+        将此应用标识为系统应用的一部分，并允许其与其他系统组件共享数据和进程。
+        这是系统级应用的关键标识。
+    -->
+
+    <!--
+        权限声明：
+        这里声明了一些作为系统应用通常会有的权限。
+        对于此演示，可能并非所有都严格必要，但作为系统应用开发实践，可以包含一些常见的权限。
+        INTERNET 权限虽然在此演示中未使用，但在许多 Android 应用中是常见的。
+    -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!--
+        如果需要更高级别的系统权限，例如直接修改系统设置，
+        则可能需要声明 SETTINGS_SYSTEM 或 WRITE_SETTINGS 等权限。
+        这些权限通常还需要在 Android.bp 中通过 `privileged: true` 和可能的 `privapp_allowlist` 配置来配合。
+    -->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+
+
+    <application
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <!--
+            android:allowBackup="false"：
+            对于系统应用，通常不希望用户通过备份/恢复功能进行备份，因此设置为 false。
+        -->
+        <!--
+            android:icon 和 android:roundIcon：
+            应用图标。您需要在 res/mipmap 目录下提供这些图标。
+        -->
+        <!--
+            android:label：
+            应用的名称，显示在启动器和设置中。从 strings.xml 中引用。
+        -->
+        <!--
+            android:theme：
+            应用的主题样式。从 styles.xml 中引用。
+        -->
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:launchMode="singleTop">
+            <!--
+                android:exported="true"：
+                允许其他应用组件或系统启动器启动此 Activity。
+                这是启动器 Activity 必需的。
+            -->
+            <!--
+                android:launchMode="singleTop"：
+                如果 Activity 已经在任务栈顶部，则不会创建新的实例，而是调用其 onNewIntent() 方法。
+            -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+                <!--
+                    <action android:name="android.intent.action.MAIN" />
+                    <category android:name="android.intent.category.LAUNCHER" />
+                    这些标签定义了此 Activity 是应用的入口点，
+                    并应该出现在设备的启动器中。
+                -->
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
+

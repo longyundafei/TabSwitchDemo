@@ -1,0 +1,9 @@
+<resources>
+    <!-- Base application theme, using system native theme to avoid Material dependency -->
+    <style name="Theme.CarControl" parent="@android:style/Theme.Light">
+        <item name="android:statusBarColor">@android:color/black</item>
+        <item name="android:windowBackground">@android:color/white</item>
+        <!-- 这里只能使用系统支持的属性，不能写 colorPrimary、colorSecondary 等 Material 属性 -->
+        <!-- 如需自定义更多内容，可在此添加系统支持的 item -->
+    </style>
+</resources>

@@ -1,0 +1,56 @@
+// packages/apps/TabSwitchDemo/Android.bp
+//
+// Android 构建蓝图文件，用于定义 TabSwitchDemo 应用的编译配置。
+//
+
+android_app {
+    // 模块名称，必须是唯一的
+    name: "TabSwitchDemo",
+
+    // 包名，对应 AndroidManifest.xml 中的 package 属性
+    package_name: "com.android.tabswitchdemo",
+
+    // 源码文件路径
+    srcs: [
+        "src/**/*.java",
+    ],
+    platform_apis: true,
+
+    // 资源文件路径
+    resource_dirs: ["res"],
+
+    // 清单文件路径
+    manifest: "AndroidManifest.xml",
+
+    // 本地 Java 库依赖，例如系统框架库
+    static_libs: [
+
+        "car-frameworks-service"
+    ],
+
+    libs: [
+        "android.car"
+    ],
+
+    // 签名配置：
+    // "platform" 签名表示这是一个系统应用，将使用平台密钥签名。
+    // 这赋予了应用系统权限，使其能够访问受保护的系统 API。
+    certificate: "platform",
+
+    // 安装位置：
+    // "priv-app" 表示应用将被安装到 /system/priv-app 目录下，
+    // 这也是系统应用的典型安装位置。
+    privileged: true,
+
+
+
+    // 编译选项
+    java_version: "1.8", // 指定 Java 编译版本
+
+    // DX/DEX 优化级别
+    optimize: {
+        enabled: true,
+    },
+}
+
+

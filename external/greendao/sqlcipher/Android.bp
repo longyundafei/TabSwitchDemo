@@ -1,0 +1,6 @@
+java_import {
+    name: "sqlcipher",
+    jars: ["sqlcipher.jar"],
+    visibility: ["//external/greendao/DaoCore"],
+}
+

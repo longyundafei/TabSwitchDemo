@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- packages/apps/TabSwitchDemo/res/layout/activity_main.xml -->
+<!--
+    MainActivity 的布局文件。
+    它包含一个 FrameLayout，用于动态加载 TabSwitchFragment。
+-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" />
+

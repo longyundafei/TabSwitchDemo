@@ -1,0 +1,7 @@
+java_library {
+    name: "greendao-api",
+    srcs: ["src/main/java/**/*.java"],
+    sdk_version: "current",
+    visibility: ["//visibility:public"],
+}
+

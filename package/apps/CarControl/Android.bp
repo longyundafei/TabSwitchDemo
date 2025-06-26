@@ -1,0 +1,79 @@
+// Prebuilt libraries
+// ============================================================
+java_import {
+    name: "android.car-prebuilt-lib",
+    jars: ["libs/android.car.jar"],
+    product_specific: true,
+}
+
+java_import {
+    name: "client-prebuilt-lib",
+    jars: ["libs/client.jar"],
+    product_specific: true,
+}
+
+java_import {
+    name: "common-prebuilt-lib",
+    jars: ["libs/common.jar"],
+    product_specific: true,
+}
+
+java_import {
+    name: "rxjava-lib",
+    jars: ["libs/rxjava-2.2.21.jar"],
+    product_specific: true,
+}
+
+// fastjson
+java_import {
+    name: "fastjson-lib",
+    jars: ["libs/fastjson-1.2.83.jar"],
+    product_specific: true,
+}
+
+// EventBus
+java_import {
+    name: "eventbus-lib",
+    jars: ["libs/eventbus-3.2.0.jar"],
+    product_specific: true,
+}
+
+// Main application module
+// ============================================================
+android_app {
+    name: "CarControl",
+
+    srcs: [
+        "src/**/*.java",
+        "src/java/**/*.java",
+    ],
+
+    resource_dirs: ["res"],
+    manifest: "AndroidManifest.xml",
+
+    sdk_version: "system_current",
+    certificate: "platform",
+    privileged: true,
+    product_specific: true,
+
+    optimize: {
+        enabled: false, // 禁用所有混淆优化行为
+//        enabled: true,
+        proguard_flags_files: ["proguard-rules.pro"],
+    },
+
+    static_libs: [
+        "android.car-prebuilt-lib",
+        "client-prebuilt-lib",
+        "common-prebuilt-lib",
+        "rxjava-lib",
+        "androidx.core_core",
+        "greendao-daocore",
+        "greendao-api",
+        "fastjson-lib",
+        "eventbus-lib",
+        "androidx.fragment_fragment",
+        "androidx.recyclerview_recyclerview",
+    ],
+}
+
