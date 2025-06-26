@@ -42,7 +42,7 @@
     <string name="maintenance_setting_permissions">保养设置权限仅限售后人员操作</string>
     <string name="exceeding_maintenance_mileage">累计车辆行驶里程已超过保养里程\n请尽快保养</string>
     <string name="exceeding_maintenance_time">累计车辆行驶时间已超过保养时间\n请尽快保养</string>
-    <string name="safety_and_maintenance">安全维护</string>
+    <string name="safety_and_maintenance">安全&amp; 维护</string>
     <string name="intelligent_driving">智能驾驶</string>
     <string name="energy_manage">能量管理</string>
     <string name="car_set">车辆设置</string>
