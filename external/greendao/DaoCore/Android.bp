@@ -1,0 +1,21 @@
+java_library {
+    name: "greendao-daocore",
+
+    srcs: [
+        "src/main/java/**/*.java",
+    ],
+
+    exclude_srcs: [
+        "src/main/java/org/greenrobot/greendao/test/**/*.java",
+    ],
+
+    static_libs: [
+        "rxjava",
+        "sqlcipher",  // 如果需要
+        "greendao-api",
+    ],
+
+    sdk_version: "current",
+    visibility: ["//visibility:public"],
+}
+

@@ -1,0 +1,6 @@
+java_import {
+    name: "rxjava",
+    jars: ["prebuilt/rxjava.jar"],
+    visibility: ["//visibility:public"],
+}
+

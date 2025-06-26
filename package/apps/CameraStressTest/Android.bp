@@ -1,0 +1,38 @@
+//
+// Android.bp for CameraStressTest App
+//
+android_app {
+    // 应用名称
+    name: "CameraStressTest",
+
+    // 指定源代码文件
+    srcs: [
+        "java/**/*.java",
+    ],
+
+    // 指定资源目录
+    resource_dirs: ["res"],
+
+    // 指定清单文件
+    manifest: "AndroidManifest.xml",
+
+    // 应用包名
+    package_name: "com.android.camerastresstest",
+
+    // 指定平台API版本进行编译
+    // 这允许应用访问内部API，对于系统级测试工具是必需的
+    platform_apis: true,
+
+    // 提升应用权限，使其可以作为系统应用运行，自动获取权限
+    // 这在测试工具中很常见
+    privileged: true,
+
+    // 指定证书为平台证书，这对于特权应用是必需的
+    certificate: "platform",
+
+    // 静态库依赖
+    static_libs: [
+        "androidx.appcompat_appcompat",
+    ],
+}
+

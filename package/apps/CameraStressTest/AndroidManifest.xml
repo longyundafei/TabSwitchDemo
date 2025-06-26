@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.android.camerastresstest"
+    coreApp="true"
+    android:sharedUserId="android.uid.system">
+
+    <!-- 请求相机权限 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <!-- 允许应用在前台服务中打开相机 -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+
+    <application
+        android:label="Camera Stress Test"
+        android:icon="@android:drawable/ic_menu_camera"
+        android:theme="@style/Theme.AppCompat.Light">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
+
