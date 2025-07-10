@@ -1,0 +1,6 @@
+service vendor.tbox-hal-1-0 /vendor/bin/hw/android.hardware.tbox@1.0-service
+    class early_hal
+    user root
+    group system inet
+    disabled
+    

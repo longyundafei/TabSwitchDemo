@@ -1,0 +1,7 @@
+mc_mcu_info_vin1 ;string
+mc_mcu_info_vin2 ;string
+mc_mcu_info_vin3 ;string
+mc_mcu_info_sn1 ;string
+mc_mcu_info_sn2 ;string
+mc_mcu_info_sn3 ;string
+mc_mcu_info_version ;string

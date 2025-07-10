@@ -1,0 +1,106 @@
+cc_binary {
+    name: "android.hardware.tbox@1.0-service",
+    init_rc: ["android.hardware.tbox@1.0-service.rc"],
+    vendor: true,
+    defaults: ["vhal_v2_0_target_defaults"],
+    relative_install_path: "hw",
+    srcs: [
+        "src/battery_voltege_message.cpp",
+        "src/BinaryMessage.cpp",
+        "src/DriveMotorDataMessage.cpp",
+        "src/ExtremeDataMessage.cpp",
+        "src/FaultDataMessage.cpp",
+        "src/GB32960MessageData.cpp",
+        "src/GB32960MessageParser.cpp",
+        "src/LocationDataMessage.cpp",
+        "src/Machine.cpp",
+        "src/main.cpp",
+        "src/messagequeue.cpp",
+        "src/networkcomm.cpp",
+        "src/RealTimeDataMessage.cpp",
+        "src/rechargeable_energy_temperature_message.cpp",
+        "src/Tbox.cpp",
+        "src/VehicleDataMessage.cpp",
+        "src/vehicle_controller.cpp",
+        "src/VehicleLoginMessage.cpp",
+        "src/xml_config.cpp",
+        "src/parm_report_message.cpp",
+        "src/CarMessageQueue.cpp",
+        "src/config_parser.cpp",
+        "src/RealTimeMessageBase.cpp",
+        "src/RemoteHavcCtl.cpp",
+        "src/LockVehicle.cpp",
+        "src/RemoteVersionSwitch.cpp",
+        "src/ChargingCtl.cpp",
+        "src/VehicleStatusInfo.cpp",
+        "src/VehicleInfoMessage.cpp",
+        "src/RealNameAuthMessage.cpp",
+        "src/RemoteSeatHeatCtl.cpp",
+        "src/RemoteSteerWheelHeatCtl.cpp",
+        "src/FrontCamInfoMessage.cpp",
+        "src/IntegratedSwitchInfoMessage.cpp",
+        "src/TerminalSysInfoMessage.cpp",
+        "src/RadioSysInfoMessage.cpp",
+        "src/ReverseAssistantSysInfoMessage.cpp",
+        "src/ChassisSysInfoMessage.cpp",
+        "src/PowerSysInfoMessage.cpp",
+        "src/BatterySysInfoMessage.cpp",
+        "src/BatteryChargingInfoMessage.cpp",
+        "src/ACSysInfoMessage.cpp",
+        "src/VehicleBodySysInfoMessage.cpp",
+        "src/VehicleControllerInfoMessage.cpp",
+    ],
+    cflags: ["-std=c++11"],
+    include_dirs: [
+        //"hardware/interfaces/automotive/vehicle/2.0/tbox/inc",
+        "hardware/interfaces/automotive/vehicle/2.0/default/impl/vhal_v2_0/tbox/inc",
+    ],
+        shared_libs: [
+        "android.hardware.automotive.vehicle@2.0",
+        "libcutils",
+        "liblog",
+        "libbase",
+        "libtinyxml2",
+        "libjsoncpp",
+    ],
+//    shared_libs: ["libcutils","liblog"],
+}
+
+prebuilt_etc {
+    name: "gecko-tbox-config.xml",
+    vendor: true,
+    src: ":tbox-config",
+}
+filegroup {
+    name: "tbox-config",
+    srcs: ["gecko-tbox-config.xml"],
+}
+
+prebuilt_etc {
+    name: "gecko-tbox-config-bjt.xml",
+    vendor: true,
+    src: ":tbox-config-bjt",
+}
+filegroup {
+    name: "tbox-config-bjt",
+    srcs: ["gecko-tbox-config-bjt.xml"],
+}
+prebuilt_etc {
+    name: "gecko-tbox-config-dst.xml",
+    vendor: true,
+    src: ":tbox-config-dst",
+}
+filegroup {
+    name: "tbox-config-dst",
+    srcs: ["gecko-tbox-config-dst.xml"],
+}
+
+prebuilt_etc {
+    name: "gecko-tbox-vehicle.json",
+    vendor: true,
+    src: ":tbox-vehicle-config",
+}
+filegroup {
+    name: "tbox-vehicle-config",
+    srcs: ["gecko-tbox-vehicle.json"],
+}
