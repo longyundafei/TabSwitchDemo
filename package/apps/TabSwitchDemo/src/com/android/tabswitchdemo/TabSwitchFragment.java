@@ -9,8 +9,12 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.Spinner;
+import android.widget.ArrayAdapter;
+import android.car.VehiclePropertyIds;
 
 import com.android.tabswitchdemo.model.TabState;
+import com.android.tabswitchdemo.model.TabConfig;
 
 public class TabSwitchFragment extends Fragment implements TabSwitchViewModel.OnStateChangeListener {
 
@@ -18,6 +22,9 @@ public class TabSwitchFragment extends Fragment implements TabSwitchViewModel.On
 
     private Button buttonTab1, buttonTab2, buttonTab3, buttonTab4;
     private TextView textCurrentTab, textWaitingConfirmation;
+    private Spinner setPropSpinner, responsePropSpinner;
+    private int selectedSetPropId = VehiclePropertyIds.GECKO_VEHICLE_DRIVE_MODE;
+    private int selectedResponsePropId = VehiclePropertyIds.GECKO_VEHICLE_DRIVE_MODE;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -28,8 +35,39 @@ public class TabSwitchFragment extends Fragment implements TabSwitchViewModel.On
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        viewModel = new TabSwitchViewModel(getActivity().getApplication());
-        viewModel.setOnStateChangeListener(this);
+        setPropSpinner = view.findViewById(R.id.spinner_set_prop);
+        responsePropSpinner = view.findViewById(R.id.spinner_response_prop);
+
+        // 属性名和ID映射
+        final String[] propNames = {"GECKO_VEHICLE_DRIVE_MODE", "GECKO_POWER_STEERING_MODE"};
+        final int[] propIds = {VehiclePropertyIds.GECKO_VEHICLE_DRIVE_MODE, VehiclePropertyIds.GECKO_POWER_STEERING_MODE};
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(getContext(), android.R.layout.simple_spinner_item, propNames);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        setPropSpinner.setAdapter(adapter);
+        responsePropSpinner.setAdapter(adapter);
+
+        setPropSpinner.setSelection(0);
+        responsePropSpinner.setSelection(0);
+
+        setPropSpinner.setOnItemSelectedListener(new android.widget.AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(android.widget.AdapterView<?> parent, View v, int position, long id) {
+                selectedSetPropId = propIds[position];
+                recreateViewModel();
+            }
+            @Override
+            public void onNothingSelected(android.widget.AdapterView<?> parent) {}
+        });
+        responsePropSpinner.setOnItemSelectedListener(new android.widget.AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(android.widget.AdapterView<?> parent, View v, int position, long id) {
+                selectedResponsePropId = propIds[position];
+                recreateViewModel();
+            }
+            @Override
+            public void onNothingSelected(android.widget.AdapterView<?> parent) {}
+        });
 
         buttonTab1 = view.findViewById(R.id.button_tab1);
         buttonTab2 = view.findViewById(R.id.button_tab2);
@@ -38,10 +76,27 @@ public class TabSwitchFragment extends Fragment implements TabSwitchViewModel.On
         textCurrentTab = view.findViewById(R.id.text_current_tab);
         textWaitingConfirmation = view.findViewById(R.id.text_waiting_confirmation);
 
+        // 初次创建ViewModel
+        recreateViewModel();
+
         buttonTab1.setOnClickListener(v -> viewModel.onTabClicked(TabState.TAB1.getId()));
         buttonTab2.setOnClickListener(v -> viewModel.onTabClicked(TabState.TAB2.getId()));
         buttonTab3.setOnClickListener(v -> viewModel.onTabClicked(TabState.TAB3.getId()));
         buttonTab4.setOnClickListener(v -> viewModel.getTemperature());
+    }
+
+    // 动态重建ViewModel
+    private void recreateViewModel() {
+        if (viewModel != null) {
+            viewModel.destroy();
+        }
+        TabConfig[] configs = new TabConfig[] {
+            new TabConfig(selectedSetPropId, selectedResponsePropId),
+            new TabConfig(selectedSetPropId, selectedResponsePropId),
+            new TabConfig(selectedSetPropId, selectedResponsePropId)
+        };
+        viewModel = new TabSwitchViewModel(getActivity().getApplication(), configs);
+        viewModel.setOnStateChangeListener(this);
     }
 
     @Override
