@@ -1,0 +1,355 @@
+{
+  "DID": "0xF010",
+  "DIDDescription": "ECU Variant Configuration",
+  "LengthBytes": 5,
+  "Fields": [
+    {
+      "Byte": 0,
+      "BitRange": "0~0",
+      "Name": "ESC",
+      "DataType": "Hex(Unsigned)",
+      "Description": {
+        "0x0": "Supprot",
+        "0x1": "No Supprot"
+      }
+    },
+    {
+      "Byte": 0,
+      "BitRange": "1~1",
+      "Name": "ADAS",
+      "DataType": "Hex(Unsigned)",
+      "Description": {
+        "0x0": "Supprot",
+        "0x1": "No Supprot"
+      }
+    },
+    {
+      "Byte": 0,
+      "BitRange": "2~2",
+      "Name": "IEHB",
+      "DataType": "Hex(Unsigned)",
+      "Description": {
+        "0x0": "Supprot",
+        "0x1": "No Supprot"
+      }
+    },
+    {
+      "Byte": 0,
+      "BitRange": "3~3",
+      "Name": "REVERSE1",
+      "DataType": "Hex(Unsigned)",
+      "Description": {
+        "0x0": "No Supprot",
+        "0x1": "Supprot"
+      }
+    },
+    {
+      "Byte": 0,
+      "BitRange": "4~4",
+      "Name": "REVERSE2",
+      "DataType": "Hex(Unsigned)",
+      "Description": {
+        "0x0": "No Supprot",
+        "0x1": "Supprot"
+      }
+    },
+    {
+      "Byte": 0,
+      "BitRange": "5~5",
+      "Name": "REVERSE3",
+      "DataType": "Hex(Unsigned)",
+      "Description": {
+        "0x0": "No Supprot",
+        "0x1": "Supprot"
+      }
+    },
+    {
+      "Byte": 0,
+      "BitRange": "6~6",
+      "Name": "TPMS",
+      "DataType": "Hex(Unsigned)",
+      "Description": {
+        "0x0": "No Supprot",
+        "0x1": "Supprot"
+      }
+    },
+    {
+      "Byte": 0,
+      "BitRange": "7~7",
+      "Name": "DFM",
+      "DataType": "Hex(Unsigned)",
+      "Description": {
+        "0x0": "No Supprot",
+        "0x1": "Supprot"
+      }
+    },
+    {
+      "Byte": 1,
+      "BitRange": "0~0",
+      "Name": "REVERSE4",
+      "DataType": "Hex(Unsigned)",
+      "Description": {
+        "0x0": "disable",
+        "0x1": "enable"
+      }
+    },
+    {
+      "Byte": 1,
+      "BitRange": "1~1",
+      "Name": "REAR PARK RAIDA",
+      "DataType": "Hex(Unsigned)",
+      "Description": {
+        "0x0": "disable",
+        "0x1": "enable"
+      }
+    },
+    {
+      "Byte": 1,
+      "BitRange": "2~2",
+      "Name": "REVERSE5",
+      "DataType": "Hex(Unsigned)",
+      "Description": {
+        "0x0": "disable",
+        "0x1": "enable"
+      }
+    },
+    {
+      "Byte": 1,
+      "BitRange": "3~3",
+      "Name": "VBC",
+      "DataType": "Hex(Unsigned)",
+      "Description": {
+        "0x0": "disable",
+        "0x1": "enable"
+      }
+    },
+    {
+      "Byte": 1,
+      "BitRange": "4~4",
+      "Name": "360AVM",
+      "DataType": "Hex(Unsigned)",
+      "Description": {
+        "0x0": "disable",
+        "0x1": "enable"
+      }
+    },
+    {
+      "Byte": 1,
+      "BitRange": "5~5",
+      "Name": "REVERSE6",
+      "DataType": "Hex(Unsigned)",
+      "Description": {
+        "0x0": "disable",
+        "0x1": "enable"
+      }
+    },
+    {
+      "Byte": 1,
+      "BitRange": "6~6",
+      "Name": "REVERSE7",
+      "DataType": "Hex(Unsigned)",
+      "Description": {
+        "0x0": "disable",
+        "0x1": "enable"
+      }
+    },
+    {
+      "Byte": 1,
+      "BitRange": "7~7",
+      "Name": "REVERSE8",
+      "DataType": "Hex(Unsigned)",
+      "Description": {
+        "0x0": "disable",
+        "0x1": "enable"
+      }
+    },
+    {
+      "Byte": 2,
+      "BitRange": "0~0",
+      "Name": "REVERSE9",
+      "DataType": "Hex(Unsigned)",
+      "Description": {
+        "0x0": "disable",
+        "0x1": "enable"
+      }
+    },
+    {
+      "Byte": 2,
+      "BitRange": "1~1",
+      "Name": "SWMC",
+      "DataType": "Hex(Unsigned)",
+      "Description": {
+        "0x0": "disable",
+        "0x1": "enable"
+      }
+    },
+    {
+      "Byte": 2,
+      "BitRange": "2~2",
+      "Name": "REVERSE10",
+      "DataType": "Hex(Unsigned)",
+      "Description": {
+        "0x0": "disable",
+        "0x1": "enable"
+      }
+    },
+    {
+      "Byte": 2,
+      "BitRange": "3~3",
+      "Name": "DVR",
+      "DataType": "Hex(Unsigned)",
+      "Description": {
+        "0x0": "disable",
+        "0x1": "enable"
+      }
+    },
+    {
+      "Byte": 2,
+      "BitRange": "4~4",
+      "Name": "REVERSE11",
+      "DataType": "Hex(Unsigned)",
+      "Description": {
+        "0x0": "disable",
+        "0x1": "enable"
+      }
+    },
+    {
+      "Byte": 2,
+      "BitRange": "5~5",
+      "Name": "REVERSE12",
+      "DataType": "Hex(Unsigned)",
+      "Description": {
+        "0x0": "disable",
+        "0x1": "enable"
+      }
+    },
+    {
+      "Byte": 2,
+      "BitRange": "6~6",
+      "Name": "IPC",
+      "DataType": "Hex(Unsigned)",
+      "Description": {
+        "0x0": "disable",
+        "0x1": "enable"
+      }
+    },
+    {
+      "Byte": 2,
+      "BitRange": "7~7",
+      "Name": "EPM",
+      "DataType": "Hex(Unsigned)",
+      "Description": {
+        "0x0": "disable",
+        "0x1": "enable"
+      }
+    },
+    {
+      "Byte": 3,
+      "BitRange": "7~7",
+      "Name": "SlipDoor Sta",
+      "DataType": "Hex(Unsigned)",
+      "Description": {
+        "0x0": "disable",
+        "0x1": "enable"
+      }
+    },
+    {
+      "Byte": 3,
+      "BitRange": "6~6",
+      "Name": "BRKDISWIP",
+      "DataType": "Hex(Unsigned)",
+      "Description": {
+        "0x0": "OFF",
+        "0x1": "ON"
+      }
+    },
+    {
+      "Byte": 3,
+      "BitRange": "5~5",
+      "Name": "BackDoor Sta",
+      "DataType": "Hex(Unsigned)",
+      "Description": {
+        "0x0": "disable",
+        "0x1": "enable"
+      }
+    },
+    {
+      "Byte": 3,
+      "BitRange": "4~4",
+      "Name": "CHGCOND",
+      "DataType": "Hex(Unsigned)",
+      "Description": {
+        "0x0": "check",
+        "0x1": "no check"
+      }
+    },
+    {
+      "Byte": 3,
+      "BitRange": "3~3",
+      "Name": "SLOL",
+      "DataType": "Hex(Unsigned)",
+      "Description": {
+        "0x0": "allow",
+        "0x1": "Not allow"
+      }
+    },
+    {
+      "Byte": 3,
+      "BitRange": "2~2",
+      "Name": "SLVersion",
+      "DataType": "Hex(Unsigned)",
+      "Description": {
+        "0x0": "NoLockVersion",
+        "0x1": "LockVersion"
+      }
+    },
+    {
+      "Byte": 3,
+      "BitRange": "0~1",
+      "Name": "SLLevel",
+      "DataType": "Hex(Unsigned)",
+      "Description": {
+        "0x0": "No limit",
+        "0x1": "1 level",
+        "0x2": "2 level",
+        "0x3": "3 level"
+      }
+    },
+    {
+      "Byte": 4,
+      "BitRange": "0~7",
+      "Name": "BootAnima",
+      "DataType": "Hex(Unsigned)",
+      "Description": {
+        "0x00": "JinHu",
+        "0x01": "DiShangTie",
+        "0x02": "JMC",
+        "0x03": "QingLin"
+      }
+    },
+    {
+      "Byte": 5,
+      "BitRange": "0~7",
+      "Name": "CountryId",
+      "DataType": "Hex(Unsigned)",
+      "Description": {
+        "0x00": "China",
+        "0x01": "France",
+        "0x02": "Germany",
+        "0x03": "Italy",
+        "0x04": "Netherlands",
+        "0x05": "Belgium",
+        "0x06": "Luxembourg",
+        "0x07": "Denmark",
+        "0x08": "Ireland",
+        "0x09": "Greece",
+        "0x0A": "Portugal",
+        "0x0B": "Spain",
+        "0x0C": "Austria",
+        "0x0D": "Sweden",
+        "0x0E": "Finland",
+        "0x0F": "Malta"
+      }
+    }
+  ]
+}

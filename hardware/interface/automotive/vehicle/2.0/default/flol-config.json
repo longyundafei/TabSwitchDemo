@@ -1,0 +1,535 @@
+{
+  "DID": "0xF101",
+  "DIDDescription": "ECU Configuration",
+  "LengthBytes": 22,
+  "Fields": [
+    {
+      "Byte": 0,
+      "BitRange": "0~3",
+      "Name": "Platform",
+      "DataType": "Hex(Unsigned)",
+      "Description": {
+        "0x0": "Initial",
+        "0x1": "A0001_ME11 Platform",
+        "0x2~0xF": "Reserved"
+      }
+    },
+    {
+      "Byte": 0,
+      "BitRange": "4~7",
+      "Name": "Model Series",
+      "DataType": "Hex(Unsigned)",
+      "Description": {
+        "0x0": "Initial",
+        "0x1": "A1001_ME11_01",
+        "0x2~0xF": "Reserved"
+      }
+    },
+    {
+      "Byte": 1,
+      "BitRange": "0~7",
+      "Name": "Model Year",
+      "DataType": "Hex(Unsigned)",
+      "Description": {
+        "0x00": "A2000_2000 MY/Initial",
+        "0x01": "A2001_2001 MY",
+        "0x02": "A2002_2002 MY",
+        "0x18": "A2024_2024 MY",
+        "0x19": "A2025_2025 MY",
+        "0x63": "A2099_2099 MY",
+        "0x64~0xFF": "Reserved"
+      }
+    },
+    {
+      "Byte": 2,
+      "BitRange": "0~3",
+      "Name": "Vehicle Usage",
+      "DataType": "Hex(Unsigned)",
+      "Description": {
+        "0x0": "Initial",
+        "0x1": "A3001_CAB",
+        "0x2~0x4": "Reserved",
+        "0x5": "A3005_VAN",
+        "0x6": "A3006_Combi",
+        "0x7~0xF": "Reserved"
+      }
+    },
+    {
+      "Byte": 2,
+      "BitRange": "4~7",
+      "Name": "Vehicle Series Subdivision",
+      "DataType": "Hex(Unsigned)",
+      "Description": {
+        "0x0": "Initial",
+        "0x1": "A6001_Freight version",
+        "0x2~0xF": "Reserved"
+      }
+    },
+    {
+      "Byte": 3,
+      "BitRange": "0~3",
+      "Name": "Driving Type",
+      "DataType": "Hex(Unsigned)",
+      "Description": {
+        "0x0": "Initial",
+        "0x1": "55001_Front Wheel Drive Of Front Motor",
+        "0x2~0x3": "Reserved",
+        "0x4": "55004_Dual Motors Four-Wheels Drive",
+        "0x5~0xF": "Reserved"
+      }
+    },
+    {
+      "Byte": 3,
+      "BitRange": "4~7",
+      "Name": "LH/RH Drive+Sliding Door Type",
+      "DataType": "Hex(Unsigned)",
+      "Description": {
+        "0x0": "Initial",
+        "0x1": "A800L_Left drive+right outer swing door",
+        "0x2": "A800R_Right drive+left outer swing door",
+        "0x3": "A800N_Left Drive+Without Right Side Door",
+        "0x4~0xF": "Reserved"
+      }
+    },
+    {
+      "Byte": 4,
+      "BitRange": "0~3",
+      "Name": "Brand",
+      "DataType": "Hex(Unsigned)",
+      "Description": {
+        "0x0": "Initial",
+        "0x1": "1050G_GECKO",
+        "0x2~0xF": "Reserved"
+      }
+    },
+    {
+      "Byte": 4,
+      "BitRange": "4~7",
+      "Name": "Reserved",
+      "DataType": "Hex(Unsigned)",
+      "Description": {
+        "0x0": "Default"
+      }
+    },
+    {
+      "Byte": 5,
+      "BitRange": "0~7",
+      "Name": "Country/Region",
+      "DataType": "Hex(Unsigned)",
+      "Description": {
+        "0x0": "Initial",
+        "0x1": "1150C_China",
+        "0x2": "1150E_Eu",
+        "0x3": "1150M_Me",
+        "0x4~0xFF": "Reserved"
+      }
+    },
+    {
+      "Byte": 6,
+      "BitRange": "0~3",
+      "Name": "Language",
+      "DataType": "Hex(Unsigned)",
+      "Description": {
+        "0x0": "Initial",
+        "0x1": "12001_Chinese/English",
+        "0x2": "12002_Multilingual",
+        "0x3~0xF": "Reserved"
+      }
+    },
+    {
+      "Byte": 6,
+      "BitRange": "4~7",
+      "Name": "Ext Color",
+      "DataType": "Hex(Unsigned)",
+      "Description": {
+        "0x0": "Initial",
+        "0x1": "21501_white",
+        "0x2": "21502_blue",
+        "0x3": "21503_cyan",
+        "0x4~0xF": "Reserved"
+      }
+    },
+    {
+      "Byte": 7,
+      "BitRange": "0~3",
+      "Name": "Driver's Seat Heating&Ventilate",
+      "DataType": "Hex(Unsigned)",
+      "Description": {
+        "0x0": "Initial",
+        "0x1": "32801_With driver's seat heating",
+        "0x2~0xD": "Reserved",
+        "0xE": "328ZZ_Without driver's seat heating",
+        "0xF": "Reserved"
+      }
+    },
+    {
+      "Byte": 7,
+      "BitRange": "4~7",
+      "Name": "Longitudinal Active Safety",
+      "DataType": "Hex(Unsigned)",
+      "Description": {
+        "0x0": "Initial",
+        "0x1": "35101_Longitudinal active safety(FCW&AEB)",
+        "0x2~0xD": "Reserved",
+        "0xE": "351ZZ_Without Longitudinal active safety(no FCW or AEB)",
+        "0xF": "Reserved"
+      }
+    },
+    {
+      "Byte": 8,
+      "BitRange": "0~3",
+      "Name": "Lateral Active Safety",
+      "DataType": "Hex(Unsigned)",
+      "Description": {
+        "0x0": "Initial",
+        "0x1": "35201_Lateral active safety(LDW&LDP)",
+        "0x2~0xD": "Reserved",
+        "0xE": "352ZZ_Without Lateral active safety(no LDW or LDP)",
+        "0xF": "Reserved"
+      }
+    },
+    {
+      "Byte": 8,
+      "BitRange": "4~7",
+      "Name": "Adaptive Cruise Control",
+      "DataType": "Hex(Unsigned)",
+      "Description": {
+        "0x0": "Initial",
+        "0x1": "35301_With ACC",
+        "0x2~0xD": "Reserved",
+        "0xE": "353ZZ_Without ACC",
+        "0xF": "Reserved"
+      }
+    },
+    {
+      "Byte": 9,
+      "BitRange": "0~3",
+      "Name": "Intelligent Speed Assistance",
+      "DataType": "Hex(Unsigned)",
+      "Description": {
+        "0x0": "Initial",
+        "0x1": "35401_With ISA",
+        "0x2~0xD": "Reserved",
+        "0xE": "354ZZ_Without ISA",
+        "0xF": "Reserved"
+      }
+    },
+    {
+      "Byte": 9,
+      "BitRange": "4~7",
+      "Name": "Intelligent High Beam Control",
+      "DataType": "Hex(Unsigned)",
+      "Description": {
+        "0x0": "Initial",
+        "0x1": "35501_With IHBC",
+        "0x2~0xD": "Reserved",
+        "0xE": "355ZZ_Without IHBC",
+        "0xF": "Reserved"
+      }
+    },
+    {
+      "Byte": 10,
+      "BitRange": "0~3",
+      "Name": "Lane Centering Control",
+      "DataType": "Hex(Unsigned)",
+      "Description": {
+        "0x0": "Initial",
+        "0x1": "35601_With LCC",
+        "0x2~0xD": "Reserved",
+        "0xE": "356ZZ_Without LCC",
+        "0xF": "Reserved"
+      }
+    },
+    {
+      "Byte": 10,
+      "BitRange": "4~7",
+      "Name": "Emergency Lane Maintenance",
+      "DataType": "Hex(Unsigned)",
+      "Description": {
+        "0x0": "Initial",
+        "0x1": "35701_With ELK",
+        "0x2~0xD": "Reserved",
+        "0xE": "357ZZ_Without ELK",
+        "0xF": "Reserved"
+      }
+    },
+    {
+      "Byte": 11,
+      "BitRange": "0~3",
+      "Name": "Lateral Blind Area Assistance",
+      "DataType": "Hex(Unsigned)",
+      "Description": {
+        "0x0": "Initial",
+        "0x1": "35801_Lateral Blind Area Assistance",
+        "0x2~0xD": "Reserved",
+        "0xE": "358ZZ_Without Lateral Blind Area Assistance",
+        "0xF": "Reserved"
+      }
+    },
+    {
+      "Byte": 11,
+      "BitRange": "4~7",
+      "Name": "Backward Blind Area Assistance",
+      "DataType": "Hex(Unsigned)",
+      "Description": {
+        "0x0": "Initial",
+        "0x1": "35901_Backward Blind Area Assistance",
+        "0x2~0xD": "Reserved",
+        "0xE": "358ZZ_Without Backward Blind Area Assistance",
+        "0xF": "Reserved"
+      }
+    },
+    {
+      "Byte": 12,
+      "BitRange": "0~3",
+      "Name": "Meter",
+      "DataType": "Hex(Unsigned)",
+      "Description": {
+        "0x0": "Initial",
+        "0x1": "37001_Kph Odometer",
+        "0x2": "37002_Mph Odometer",
+        "0x3~0xF": "Reserved"
+      }
+    },
+    {
+      "Byte": 12,
+      "BitRange": "4~7",
+      "Name": "Energy Type",
+      "DataType": "Hex(Unsigned)",
+      "Description": {
+        "0x0": "Initial",
+        "0x1": "Pure Electric Energy(default)",
+        "0x2": "Range Extend Electric",
+        "0x3~0xF": "Reserved"
+      }
+    },
+    {
+      "Byte": 13,
+      "BitRange": "0~3",
+      "Name": "Steering Wheel",
+      "DataType": "Hex(Unsigned)",
+      "Description": {
+        "0x0": "Initial",
+        "0x1": "56501_PU Multifunctional Steering Wheel (ACC/Menu)",
+        "0x2~0xF": "Reserved"
+      }
+    },
+    {
+      "Byte": 13,
+      "BitRange": "4~7",
+      "Name": "Steering Wheel Heating",
+      "DataType": "Hex(Unsigned)",
+      "Description": {
+        "0x0": "Initial",
+        "0x1": "56601_With Steering Wheel Heating",
+        "0x2~0xD": "Reserved",
+        "0xE": "566ZZ_Without Steering Wheel Heating",
+        "0xF": "Reserved"
+      }
+    },
+    {
+      "Byte": 14,
+      "BitRange": "0~3",
+      "Name": "Tyre",
+      "DataType": "Hex(Unsigned)",
+      "Description": {
+        "0x0": "Initial",
+        "0x1": "61001_215/75 R16 LT 12PR",
+        "0x2~0xF": "Reserved"
+      }
+    },
+    {
+      "Byte": 14,
+      "BitRange": "4~7",
+      "Name": "Tyre Pressure Monitoring System",
+      "DataType": "Hex(Unsigned)",
+      "Description": {
+        "0x0": "Initial",
+        "0x1": "62501_Indirect TPMS",
+        "0x2": "62502_Direct TPMS",
+        "0x3~0xF": "Reserved"
+      }
+    },
+    {
+      "Byte": 15,
+      "BitRange": "0~3",
+      "Name": "Reverse Image",
+      "DataType": "Hex(Unsigned)",
+      "Description": {
+        "0x0": "Initial",
+        "0x1": "69701_180 degree reverse image",
+        "0x2": "69702_360 degree panoramic reverse image",
+        "0x3": "69703_No reverse image",
+        "0x4~0xF": "Reserved"
+      }
+    },
+    {
+      "Byte": 15,
+      "BitRange": "4~7",
+      "Name": "Parking Assist Radar",
+      "DataType": "Hex(Unsigned)",
+      "Description": {
+        "0x0": "Initial",
+        "0x1": "69801_Only With Rear Radar(4)",
+        "0x2": "69802_With Rear(4) and Front(4) Radars",
+        "0x3~0xD": "Reserved",
+        "0xE": "698ZZ_Without Radar",
+        "0xF": "Reserved"
+      }
+    },
+    {
+      "Byte": 16,
+      "BitRange": "0~3",
+      "Name": "Cockpit Air Conditioning",
+      "DataType": "Hex(Unsigned)",
+      "Description": {
+        "0x0": "Initial",
+        "0x1": "73501_Manual Air Conditioning",
+        "0x2": "73502_Automatic heating and cooling air conditioning, single zone",
+        "0x3~0xF": "Reserved"
+      }
+    },
+    {
+      "Byte": 16,
+      "BitRange": "4~7",
+      "Name": "Large Screen Assembly",
+      "DataType": "Hex(Unsigned)",
+      "Description": {
+        "0x0": "Initial",
+        "0x1": "75001_8.9 inch screen",
+        "0x2": "75002_10.1 inch touchscreen",
+        "0x3": "75003_12.3 inch touchscreen",
+        "0x4~0xF": "Reserved"
+      }
+    },
+    {
+      "Byte": 17,
+      "BitRange": "0~3",
+      "Name": "Navigation",
+      "DataType": "Hex(Unsigned)",
+      "Description": {
+        "0x0": "Initial",
+        "0x1": "76101_With Navigation",
+        "0x2~0xD": "Reserved",
+        "0xE": "761ZZ_No Navigation",
+        "0xF": "Reserved"
+      }
+    },
+    {
+      "Byte": 17,
+      "BitRange": "4~7",
+      "Name": "Driving Video Recorder",
+      "DataType": "Hex(Unsigned)",
+      "Description": {
+        "0x0": "Initial",
+        "0x1": "77501_With DVR",
+        "0x2~0xD": "Reserved",
+        "0xE": "775ZZ_Without DVR",
+        "0xF": "Reserved"
+      }
+    },
+    {
+      "Byte": 18,
+      "BitRange": "0~3",
+      "Name": "Intelligent Vehicle System",
+      "DataType": "Hex(Unsigned)",
+      "Description": {
+        "0x0": "Initial",
+        "0x1": "82001_TBD",
+        "0x2~0xD": "Reserved",
+        "0xE": "820ZZ_No Vehicle Operation Data Management (Supporting Fleet Management And Order Management)",
+        "0xF": "Reserved"
+      }
+    },
+    {
+      "Byte": 18,
+      "BitRange": "4~7",
+      "Name": "Intelligent Cargo Hold System",
+      "DataType": "Hex(Unsigned)",
+      "Description": {
+        "0x0": "Initial",
+        "0x1": "83001_Monitoring with cargo hold",
+        "0x2~0xD": "Reserved",
+        "0xE": "830ZZ_No cargo hold inspection",
+        "0xF": "Reserved"
+      }
+    },
+    {
+      "Byte": 19,
+      "BitRange": "0~3",
+      "Name": "DMS Driver Monitoring System",
+      "DataType": "Hex(Unsigned)",
+      "Description": {
+        "0x0": "Initial",
+        "0x1": "84001_With DMS driver monitoring system",
+        "0x2~0xD": "Reserved",
+        "0xE": "840ZZ_With DMS driver monitoring system",
+        "0xF": "Reserved"
+      }
+    },
+    {
+      "Byte": 19,
+      "BitRange": "4~7",
+      "Name": "Portable Power Source V2L",
+      "DataType": "Hex(Unsigned)",
+      "Description": {
+        "0x0": "Initial",
+        "0x1": "94001_External inverter",
+        "0x2": "94002_Built-in OBC",
+        "0x3~0xF": "Reserved"
+      }
+    },
+    {
+      "Byte": 20,
+      "BitRange": "0~3",
+      "Name": "Cruise Control",
+      "DataType": "Hex(Unsigned)",
+      "Description": {
+        "0x0": "Initial",
+        "0x1": "36101_With CC",
+        "0x2~0xD": "Reserved",
+        "0xE": "361ZZ_Without CC",
+        "0xF": "Reserved"
+      }
+    },
+    {
+      "Byte": 20,
+      "BitRange": "4~7",
+      "Name": "Hill Descent Control",
+      "DataType": "Hex(Unsigned)",
+      "Description": {
+        "0x0": "Initial",
+        "0x1": "36301_With HDC",
+        "0x2~0xD": "Reserved",
+        "0xE": "363ZZ_Without HDC",
+        "0xF": "Reserved"
+      }
+    },
+    {
+      "Byte": 21,
+      "BitRange": "0~3",
+      "Name": "Illuminated Entry System",
+      "DataType": "Hex(Unsigned)",
+      "Description": {
+        "0x0": "Initial",
+        "0x1": "69101_With Illuminated Entry System",
+        "0x2~0xD": "Reserved",
+        "0xE": "691ZZ_Without Illuminated Entry System",
+        "0xF": "Reserved"
+      }
+    },
+    {
+      "Byte": 21,
+      "BitRange": "4~7",
+      "Name": "Peristalsis Control",
+      "DataType": "Hex(Unsigned)",
+      "Description": {
+        "0x0": "Initial",
+        "0x1": "36401_With PECO",
+        "0x2~0xD": "Reserved",
+        "0xE": "364ZZ_Without PECO",
+        "0xF": "Reserved"
+      }
+    }
+  ]
+}

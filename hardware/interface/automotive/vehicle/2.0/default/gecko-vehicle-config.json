@@ -1,0 +1,7 @@
+{
+    "CanCommunictionDevice": 2,
+    "PortName": "/dev/spidev0.0",
+    "IPServer": "127.0.0.1",
+    "Port": 12345,
+    "Version": "1.2"
+}

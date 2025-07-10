@@ -1,0 +1,1752 @@
+<items>
+  <item>
+    <right areaId="0" name="INFO_FUEL_CAPACITY" type="float"/>
+    <left flags="1" frequency="10" propId="291504388">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="INFO_FUEL_TYPE" type="int"/>
+    <left flags="1" frequency="10" propId="289472773">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="INFO_EV_BATTERY_CAPACITY" type="float"/>
+    <left flags="1" frequency="10" propId="291504390">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="INFO_EV_CONNECTOR_TYPE" type="int"/>
+    <left flags="1" frequency="10" propId="289472775">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="INFO_FUEL_DOOR_LOCATION" type="int"/>
+    <left flags="1" frequency="10" propId="289407240">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="INFO_EV_PORT_LOCATION" type="int"/>
+    <left flags="1" frequency="10" propId="289407241">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="INFO_MULTI_EV_PORT_LOCATIONS" type="int"/>
+    <left flags="1" frequency="10" propId="289472780">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="INFO_MAKE" type="string"/>
+    <left flags="1" frequency="10" propId="286261505">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="INFO_MODEL" type="string"/>
+    <left flags="1" frequency="10" propId="286261506">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="INFO_MODEL_YEAR" type="int"/>
+    <left flags="1" frequency="10" propId="289407235">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="INFO_EXTERIOR_DIMENSIONS" type="int"/>
+    <left flags="1" frequency="10" propId="289472779">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="PERF_VEHICLE_SPEED" type="float"/>
+    <left flags="1" frequency="10" propId="291504647">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="PERF_VEHICLE_SPEED_DISPLAY" type="float"/>
+    <left flags="1" frequency="10" propId="291504648">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="VEHICLE_SPEED_DISPLAY_UNITS" type="int"/>
+    <left flags="1" frequency="10" propId="289408517">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="1" name="SEAT_OCCUPANCY" type="int"/>
+    <left flags="1" frequency="10" propId="356518832">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="1" name="SEAT_BELT_BUCKLED" type="int"/>
+    <left flags="1" frequency="10" propId="354421634">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="INFO_DRIVER_SEAT" type="int"/>
+    <left flags="1" frequency="10" propId="356516106">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="PERF_ODOMETER" type="float"/>
+    <left flags="1" frequency="10" propId="291504644">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="PERF_STEERING_ANGLE" type="float"/>
+    <left flags="1" frequency="10" propId="291504649">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="PERF_REAR_STEERING_ANGLE" type="float"/>
+    <left flags="1" frequency="10" propId="291504656">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="ENGINE_RPM" type="float"/>
+    <left flags="1" frequency="10" propId="291504901">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="FUEL_LEVEL" type="float"/>
+    <left flags="1" frequency="10" propId="291504903">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="FUEL_DOOR_OPEN" type="int"/>
+    <left flags="1" frequency="10" propId="287310600">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="EV_BATTERY_LEVEL" type="float"/>
+    <left flags="1" frequency="10" propId="291504905">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="EV_CHARGE_PORT_OPEN" type="int"/>
+    <left flags="1" frequency="10" propId="287310602">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="EV_CHARGE_PORT_CONNECTED" type="int"/>
+    <left flags="1" frequency="10" propId="287310603">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="EV_BATTERY_INSTANTANEOUS_CHARGE_RATE" type="float"/>
+    <left flags="1" frequency="10" propId="291504908">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="RANGE_REMAINING" type="float"/>
+    <left flags="1" frequency="10" propId="291504904">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="1" name="TIRE_PRESSURE" type="float"/>
+    <left flags="1" frequency="10" propId="392168201">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="2" name="TIRE_PRESSURE" type="float"/>
+    <left flags="1" frequency="10" propId="392168201">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="4" name="TIRE_PRESSURE" type="float"/>
+    <left flags="1" frequency="10" propId="392168201">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="8" name="TIRE_PRESSURE" type="float"/>
+    <left flags="1" frequency="10" propId="392168201">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="1" name="CRITICALLY_LOW_TIRE_PRESSURE" type="float"/>
+    <left flags="1" frequency="10" propId="392168202">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="2" name="CRITICALLY_LOW_TIRE_PRESSURE" type="float"/>
+    <left flags="1" frequency="10" propId="392168202">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="4" name="CRITICALLY_LOW_TIRE_PRESSURE" type="float"/>
+    <left flags="1" frequency="10" propId="392168202">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="8" name="CRITICALLY_LOW_TIRE_PRESSURE" type="float"/>
+    <left flags="1" frequency="10" propId="392168202">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="TIRE_PRESSURE_DISPLAY_UNITS" type="int"/>
+    <left flags="1" frequency="10" propId="289408514">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="CURRENT_GEAR" type="int"/>
+    <left flags="1" frequency="10" propId="289408001">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="PARKING_BRAKE_ON" type="int"/>
+    <left flags="1" frequency="10" propId="287310850">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="PARKING_BRAKE_AUTO_APPLY" type="int"/>
+    <left flags="1" frequency="10" propId="287310851">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="FUEL_LEVEL_LOW" type="int"/>
+    <left flags="1" frequency="10" propId="287310853">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="HW_KEY_INPUT" type="int"/>
+    <left flags="1" frequency="10" propId="289475088">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="HW_ROTARY_INPUT" type="int"/>
+    <left flags="1" frequency="10" propId="289475104">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="HW_CUSTOM_INPUT" type="int"/>
+    <left flags="1" frequency="10" propId="289475120">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="117" name="HVAC_POWER_ON" type="int"/>
+    <left flags="1" frequency="10" propId="354419984">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="1" name="HVAC_DEFROSTER" type="int"/>
+    <left flags="1" frequency="10" propId="320865540">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="1" name="HVAC_ELECTRIC_DEFROSTER_ON" type="int"/>
+    <left flags="1" frequency="10" propId="320865556">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="117" name="HVAC_MAX_DEFROST_ON" type="int"/>
+    <left flags="1" frequency="10" propId="354419975">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="117" name="HVAC_RECIRC_ON" type="int"/>
+    <left flags="1" frequency="10" propId="354419976">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="117" name="HVAC_AUTO_RECIRC_ON" type="int"/>
+    <left flags="1" frequency="10" propId="354419986">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="117" name="HVAC_AC_ON" type="int"/>
+    <left flags="1" frequency="10" propId="354419973">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="117" name="HVAC_MAX_AC_ON" type="int"/>
+    <left flags="1" frequency="10" propId="354419974">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="117" name="HVAC_AUTO_ON" type="int"/>
+    <left flags="1" frequency="10" propId="354419978">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="117" name="HVAC_DUAL_ON" type="int"/>
+    <left flags="1" frequency="10" propId="354419977">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="117" name="HVAC_FAN_SPEED" type="int"/>
+    <left flags="1" frequency="10" propId="356517120">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="117" name="HVAC_FAN_DIRECTION" type="int"/>
+    <left flags="1" frequency="10" propId="356517121">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="117" name="HVAC_FAN_DIRECTION_AVAILABLE" type="int"/>
+    <left flags="1" frequency="10" propId="356582673">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="1" name="HVAC_SEAT_VENTILATION" type="int"/>
+    <left flags="1" frequency="10" propId="356517139">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="HVAC_STEERING_WHEEL_HEAT" type="int"/>
+    <left flags="1" frequency="10" propId="289408269">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="1" name="HVAC_SEAT_TEMPERATURE" type="int"/>
+    <left flags="1" frequency="10" propId="356517131">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="49" name="HVAC_TEMPERATURE_SET" type="float"/>
+    <left flags="1" frequency="10" propId="358614275">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="HVAC_TEMPERATURE_VALUE_SUGGESTION" type="float"/>
+    <left flags="1" frequency="10" propId="291570965">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="ENV_OUTSIDE_TEMPERATURE" type="float"/>
+    <left flags="1" frequency="10" propId="291505923">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="HVAC_TEMPERATURE_DISPLAY_UNITS" type="int"/>
+    <left flags="1" frequency="10" propId="289408270">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="DISTANCE_DISPLAY_UNITS" type="int"/>
+    <left flags="1" frequency="10" propId="289408512">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="NIGHT_MODE" type="int"/>
+    <left flags="1" frequency="10" propId="287310855">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GEAR_SELECTION" type="int"/>
+    <left flags="1" frequency="10" propId="289408000">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="TURN_SIGNAL_STATE" type="int"/>
+    <left flags="1" frequency="10" propId="289408008">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="IGNITION_STATE" type="int"/>
+    <left flags="1" frequency="10" propId="289408009">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="ENGINE_OIL_LEVEL" type="int"/>
+    <left flags="1" frequency="10" propId="289407747">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="ENGINE_OIL_TEMP" type="float"/>
+    <left flags="1" frequency="10" propId="291504900">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="" type=""/>
+    <left flags="1" frequency="10" propId="568329830">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="" type=""/>
+    <left flags="1" frequency="10" propId="568332562">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="" type=""/>
+    <left flags="1" frequency="10" propId="568332563">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="" type=""/>
+    <left flags="1" frequency="10" propId="568332564">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="" type="float"/>
+    <left flags="1" frequency="10" propId="568332561">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="1" name="DOOR_LOCK" type="int"/>
+    <left flags="1" frequency="10" propId="371198722">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="4" name="DOOR_LOCK" type="int"/>
+    <left flags="1" frequency="10" propId="371198722">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="16" name="DOOR_LOCK" type="int"/>
+    <left flags="1" frequency="10" propId="371198722">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="64" name="DOOR_LOCK" type="int"/>
+    <left flags="1" frequency="10" propId="371198722">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="1" name="DOOR_POS" type="int"/>
+    <left flags="1" frequency="10" propId="373295872">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="4" name="DOOR_POS" type="int"/>
+    <left flags="1" frequency="10" propId="373295872">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="16" name="DOOR_POS" type="int"/>
+    <left flags="1" frequency="10" propId="373295872">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="64" name="DOOR_POS" type="int"/>
+    <left flags="1" frequency="10" propId="373295872">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="1344" name="WINDOW_LOCK" type="int"/>
+    <left flags="1" frequency="10" propId="320867268">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="16" name="WINDOW_POS" type="int"/>
+    <left flags="1" frequency="10" propId="322964416">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="64" name="WINDOW_POS" type="int"/>
+    <left flags="1" frequency="10" propId="322964416">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="256" name="WINDOW_POS" type="int"/>
+    <left flags="1" frequency="10" propId="322964416">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="1024" name="WINDOW_POS" type="int"/>
+    <left flags="1" frequency="10" propId="322964416">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="65536" name="WINDOW_POS" type="int"/>
+    <left flags="1" frequency="10" propId="322964416">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="WHEEL_TICK" type="int64"/>
+    <left flags="1" frequency="10" propId="290521862">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="ABS_ACTIVE" type="int"/>
+    <left flags="1" frequency="10" propId="287310858">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="TRACTION_CONTROL_ACTIVE" type="int"/>
+    <left flags="1" frequency="10" propId="287310859">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="AP_POWER_STATE_REQ" type="int"/>
+    <left flags="1" frequency="10" propId="289475072">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="AP_POWER_STATE_REPORT" type="int"/>
+    <left flags="1" frequency="10" propId="289475073">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="DISPLAY_BRIGHTNESS" type="int"/>
+    <left flags="1" frequency="10" propId="289409539">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="OBD2_LIVE_FRAME" type="int"/>
+    <left flags="1" frequency="10" propId="299896064">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="OBD2_FREEZE_FRAME" type=""/>
+    <left flags="1" frequency="10" propId="299896065">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="OBD2_FREEZE_FRAME_INFO" type=""/>
+    <left flags="1" frequency="10" propId="299896066">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="OBD2_FREEZE_FRAME_CLEAR" type=""/>
+    <left flags="1" frequency="10" propId="299896067">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="HEADLIGHTS_STATE" type="int"/>
+    <left flags="1" frequency="10" propId="289410560">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="HIGH_BEAM_LIGHTS_STATE" type="int"/>
+    <left flags="1" frequency="10" propId="289410561">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="FOG_LIGHTS_STATE" type="int"/>
+    <left flags="1" frequency="10" propId="289410562">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="HAZARD_LIGHTS_STATE" type="int"/>
+    <left flags="1" frequency="10" propId="289410563">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+<!--
+  <item>
+    <right areaId="0" name="READING_LIGHTS_STATE" type="int"/>
+    <left flags="1" frequency="10" propId="356519683">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+-->
+  <item>
+    <right areaId="0" name="HEADLIGHTS_SWITCH" type="int"/>
+    <left flags="1" frequency="10" propId="289410576">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="HIGH_BEAM_LIGHTS_SWITCH" type="int"/>
+    <left flags="1" frequency="10" propId="289410577">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="FOG_LIGHTS_SWITCH" type="int"/>
+    <left flags="1" frequency="10" propId="289410578">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="HAZARD_LIGHTS_SWITCH" type="int"/>
+    <left flags="1" frequency="10" propId="289410579">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+<!--
+  <item>
+    <right areaId="0" name="READING_LIGHTS_SWITCH" type="int"/>
+    <left flags="1" frequency="10" propId="356519684">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+-->
+  <item>
+    <right areaId="0" name="CABIN_LIGHTS_STATE" type="int"/>
+    <left flags="1" frequency="10" propId="289410817">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="EVS_SERVICE_REQUEST" type="int"/>
+    <left flags="1" frequency="10" propId="289476368">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="VEHICLE_MAP_SERVICE" type=""/>
+    <left flags="1" frequency="10" propId="299895808">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="1" name="" type="int"/>
+    <left flags="1" frequency="10" propId="639631617">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="4" name="" type="int"/>
+    <left flags="1" frequency="10" propId="639631617">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="16" name="" type="int"/>
+    <left flags="1" frequency="10" propId="639631617">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="64" name="" type="int"/>
+    <left flags="1" frequency="10" propId="639631617">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="49" name="" type="float"/>
+    <left flags="1" frequency="10" propId="627048706">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="1" name="" type="int"/>
+    <left flags="1" frequency="10" propId="591397123">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="" type="string"/>
+    <left flags="1" frequency="10" propId="554696964">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="ELECTRONIC_TOLL_COLLECTION_CARD_TYPE" type="int"/>
+    <left flags="1" frequency="10" propId="289410873">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="ELECTRONIC_TOLL_COLLECTION_CARD_STATUS" type="int"/>
+    <left flags="1" frequency="10" propId="289410874">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="SUPPORT_CUSTOMIZE_VENDOR_PERMISSION" type="int"/>
+    <left flags="1" frequency="10" propId="287313669">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="INITIAL_USER_INFO" type=""/>
+    <left flags="1" frequency="10" propId="299896583">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="SWITCH_USER" type=""/>
+    <left flags="1" frequency="10" propId="299896584">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="CREATE_USER" type=""/>
+    <left flags="1" frequency="10" propId="299896585">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="REMOVE_USER" type=""/>
+    <left flags="1" frequency="10" propId="299896586">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="USER_IDENTIFICATION_ASSOCIATION" type=""/>
+    <left flags="1" frequency="10" propId="299896587">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="POWER_POLICY_REQ" type=""/>
+    <left flags="1" frequency="10" propId="286265121">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="POWER_POLICY_GROUP_REQ" type=""/>
+    <left flags="1" frequency="10" propId="286265122">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="CURRENT_POWER_POLICY" type=""/>
+    <left flags="1" frequency="10" propId="286265123">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="EPOCH_TIME" type=""/>
+    <left flags="1" frequency="10" propId="290457094">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="WATCHDOG_ALIVE" type=""/>
+    <left flags="1" frequency="10" propId="290459441">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="WATCHDOG_TERMINATED_PROCESS" type=""/>
+    <left flags="1" frequency="10" propId="299896626">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="VHAL_HEARTBEAT" type=""/>
+    <left flags="1" frequency="10" propId="290459443">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="CLUSTER_SWITCH_UI" type="int"/>
+    <left flags="1" frequency="10" propId="289410868">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="CLUSTER_DISPLAY_STATE" type="int"/>
+    <left flags="1" frequency="10" propId="289476405">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="CLUSTER_REPORT_STATE" type=""/>
+    <left flags="1" frequency="10" propId="299896630">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="CLUSTER_REQUEST_DISPLAY" type=""/>
+    <left flags="1" frequency="10" propId="289410871">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="CLUSTER_NAVIGATION_STATE" type=""/>
+    <left flags="1" frequency="10" propId="292556600">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="" type="int"/>
+    <left flags="1" frequency="10" propId="557853201">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="" type="float"/>
+    <left flags="1" frequency="10" propId="559950353">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="" type="int"/>
+    <left flags="1" frequency="10" propId="555756049">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="" type="string"/>
+    <left flags="1" frequency="10" propId="554707473">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="" type=""/>
+    <left flags="1" frequency="10" propId="557846324">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="" type=""/>
+    <left flags="1" frequency="10" propId="557911861">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="" type="int"/>
+    <left flags="1" frequency="10" propId="568332086">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="" type="int"/>
+    <left flags="1" frequency="10" propId="557846327">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="" type=""/>
+    <left flags="1" frequency="10" propId="560992056">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_MOMER_MIN_VOLTCELL" type="float"/>
+    <left flags="1" frequency="10" propId="559947781">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_MOMER_MAX_VOLTCELL" type="float"/>
+    <left flags="1" frequency="10" propId="559947780">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_MOMER_MAX_TEMPCELL" type="float"/>
+    <left flags="1" frequency="10" propId="559947782">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_MOMER_MIN_TEMPCELL" type="float"/>
+    <left flags="1" frequency="10" propId="559947783">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_ENGINE_TEMP" type="int"/>
+    <left flags="1" frequency="10" propId="559947794">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_ENGINE_STATE" type="int"/>
+    <left flags="1" frequency="10" propId="557850643">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_VEHICLE_DRIVE_MODE" type="int"/>
+    <left flags="1" frequency="10" propId="557850627">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_CLTC_RANGE_REMAINING" type="float"/>
+    <left flags="1" frequency="10" propId="559947793">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_LAMPLET_STATUS" type="int"/>
+    <left flags="1" frequency="10" propId="557850635">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_MAIN_SEAT_PRESSURE_STATUS" type="int"/>
+    <left flags="1" frequency="10" propId="557850636">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_BRAKE_LEVEL_ALARM_STATUS" type="int"/>
+    <left flags="1" frequency="10" propId="557850637">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_MAIN_SEAT_SAFETY_BELT_STATUS" type="int"/>
+    <left flags="1" frequency="10" propId="557850638">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_ENGINE_STATUS" type="int"/>
+    <left flags="1" frequency="10" propId="557850639">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_LOW_VOL_BATTERY_VOL" type="float"/>
+    <left flags="1" frequency="10" propId="559947792">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="117" name="GECKO_HVAC_PTC_HEAT_ON" type="int"/>
+    <left flags="1" frequency="10" propId="555753492">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_HVAC_CONTROL_ERROR" type="int"/>
+    <left flags="1" frequency="10" propId="557850646">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_AVERAGE_ENERGY_CONSUMPTION" type="float"/>
+    <left flags="1" frequency="10" propId="559947785">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_INSTANCE_ENERGY_CONSUMPTION" type="float"/>
+    <left flags="1" frequency="10" propId="559947786">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_GLOBAL_ANNOUNCEMENT" type="int"/>
+    <left flags="1" frequency="10" propId="557916168">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_HIGH_BEAM_LIGHTS_LEVEL" type="int"/>
+    <left flags="1" frequency="10" propId="557850645">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_EV_CHARGE_TIME_REMAINING" type=""/>
+    <left flags="1" frequency="10" propId="557850624">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_EV_BATTERY_CURRENT" type=""/>
+    <left flags="1" frequency="10" propId="559947778">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_EV_BATTERY_VOLTAGE" type=""/>
+    <left flags="1" frequency="10" propId="559947777">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_VCU_HVPOWER" type="int"/>
+    <left flags="1" frequency="10" propId="557850647">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_IPU_DCDCOPERATINGMODE" type="int"/>
+    <left flags="1" frequency="10" propId="557850648">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_VCU_PARKSTATE" type="int"/>
+    <left flags="1" frequency="10" propId="557850649">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_BMS_BATINSULATRESISTANCE" type="int"/>
+    <left flags="1" frequency="10" propId="557850650">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_VCU_APSTATUS" type="int"/>
+    <left flags="1" frequency="10" propId="557850651">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_VCU_BPSTATUS" type="int"/>
+    <left flags="1" frequency="10" propId="557850652">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_MCU_MOTORTORQUE" type="int"/>
+    <left flags="1" frequency="10" propId="557850653">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_MCU_BUSVOLT" type="int"/>
+    <left flags="1" frequency="10" propId="557850655">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_MCU_BUSCURRENT" type="int"/>
+    <left flags="1" frequency="10" propId="557850656">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_BMS_MAXVOLTCELLPACKNUM" type="int"/>
+    <left flags="1" frequency="10" propId="557850657">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_BMS_MAXVOLTMONOMERCELL" type="int"/>
+    <left flags="1" frequency="10" propId="557850658">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_BMS_MINVOLTCELLPACKNUM" type="int"/>
+    <left flags="1" frequency="10" propId="557850659">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_BMS_MINVOLTMONOMERCELL" type="int"/>
+    <left flags="1" frequency="10" propId="557850660">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_BMS_MAXTEMPCELLPACKNUM" type="int"/>
+    <left flags="1" frequency="10" propId="557850661">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_BMS_MAXTEMPMONOMERCELL" type="int"/>
+    <left flags="1" frequency="10" propId="557850662">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_BMS_MINTEMPCELLPACKNUM" type="int"/>
+    <left flags="1" frequency="10" propId="557850663">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_BMS_MINTEMPMONOMERCELL" type="int"/>
+    <left flags="1" frequency="10" propId="557850664">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_VCU_FAULTLEVE" type="int"/>
+    <left flags="1" frequency="10" propId="557850665">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_BMS_DELTATEMP" type="int"/>
+    <left flags="1" frequency="10" propId="557850666">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_BMS_OVERTEMP" type="int"/>
+    <left flags="1" frequency="10" propId="557850667">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_BMS_PACKOVERVOLT" type="int"/>
+    <left flags="1" frequency="10" propId="557850668">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_BMS_PACKUDVOLT" type="int"/>
+    <left flags="1" frequency="10" propId="557850669">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_BMS_PACKLOWSOC" type="int"/>
+    <left flags="1" frequency="10" propId="557850670">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_BMS_CELLOVERVOLT" type="int"/>
+    <left flags="1" frequency="10" propId="557850671">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_BMS_CELLUDVOLT" type="int"/>
+    <left flags="1" frequency="10" propId="557850672">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_BMS_PACKHIGHSOC" type="int"/>
+    <left flags="1" frequency="10" propId="557850673">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_BMS_PACKFASTCHGSOC" type="int"/>
+    <left flags="1" frequency="10" propId="557850674">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_BMS_BATSYSNOTMTC" type="int"/>
+    <left flags="1" frequency="10" propId="557850675">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_BMS_UCELLINCON" type="int"/>
+    <left flags="1" frequency="10" propId="557850676">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_BMS_LOWINSRES" type="int"/>
+    <left flags="1" frequency="10" propId="557850677">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_IPU_DCDC_OVER_TEMP" type="int"/>
+    <left flags="1" frequency="10" propId="557850678">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_VCU_BRAKSYSWARN" type="int"/>
+    <left flags="1" frequency="10" propId="557850679">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_MCU_IGBT_OVERHEAT_WARNING" type="int"/>
+    <left flags="1" frequency="10" propId="557850680">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_BMS_HVILFAULT" type="int"/>
+    <left flags="1" frequency="10" propId="557850681">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_MCU_MOTOR_OVERHEAT_WARNING" type="int"/>
+    <left flags="1" frequency="10" propId="557850682">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_BMS_PACKOVERCHARGE" type="int"/>
+    <left flags="1" frequency="10" propId="557850683">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_BMS_BATTFAULTTOTALNUM" type="int"/>
+    <left flags="1" frequency="10" propId="557850684">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_BMS_FAULTCODE" type="int"/>
+    <left flags="1" frequency="10" propId="557850685">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_MCU_MOTORFAULTTOTALNUM" type="int"/>
+    <left flags="1" frequency="10" propId="557850686">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_MCU_ERR_CODE" type="int"/>
+    <left flags="1" frequency="10" propId="557850687">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_B2V_V_FRAMENO" type="int"/>
+    <left flags="1" frequency="10" propId="557850688">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_B2V_V_CELL_VOLTN1" type="int"/>
+    <left flags="1" frequency="10" propId="557850689">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_B2V_V_CELL_VOLTN2" type="int"/>
+    <left flags="1" frequency="10" propId="557850690">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_B2V_V_CELL_VOLTN3" type="int"/>
+    <left flags="1" frequency="10" propId="557850691">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_B2V_T_FRAMENO" type="int"/>
+    <left flags="1" frequency="10" propId="557850692">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_B2V_T_CELL_TEMPN1" type="int"/>
+    <left flags="1" frequency="10" propId="557850693">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_B2V_T_CELL_TEMPN2" type="int"/>
+    <left flags="1" frequency="10" propId="557850694">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_B2V_T_CELL_TEMPN3" type="int"/>
+    <left flags="1" frequency="10" propId="557850695">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_B2V_T_CELL_TEMPN4" type="int"/>
+    <left flags="1" frequency="10" propId="557850696">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_B2V_T_CELL_TEMPN5" type="int"/>
+    <left flags="1" frequency="10" propId="557850697">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_B2V_T_CELL_TEMPN6" type="int"/>
+    <left flags="1" frequency="10" propId="557850698">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_B2V_T_CELL_TEMPN7" type="int"/>
+    <left flags="1" frequency="10" propId="557850699">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_BMS_HARDWAREVERSION" type="int"/>
+    <left flags="1" frequency="10" propId="557850700">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_BMS_SOFTWAREVERSION" type="int"/>
+    <left flags="1" frequency="10" propId="557850701">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_MCU_HARDWAREVERSION" type="int"/>
+    <left flags="1" frequency="10" propId="557850702">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_MCU_SOFTWAREVERSION" type="int"/>
+    <left flags="1" frequency="10" propId="557850703">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_IPU_HARDWARE_NUM" type="int"/>
+    <left flags="1" frequency="10" propId="557850704">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_IPU_SOFEWARE_NUM" type="int"/>
+    <left flags="1" frequency="10" propId="557850705">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_VCU_HARDWARE_NUM" type="int"/>
+    <left flags="1" frequency="10" propId="557850706">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_VCU_SOFEWARE_NUM" type="int"/>
+    <left flags="1" frequency="10" propId="557850707">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_BCM_HARDWARE_NUM" type="int"/>
+    <left flags="1" frequency="10" propId="557850708">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_BCM_SOFEWARE_NUM" type="int"/>
+    <left flags="1" frequency="10" propId="557850709">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_VCU_VERSION" type="int"/>
+    <left flags="1" frequency="10" propId="557850710">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_VCU_OPERATLICENCE" type="int"/>
+    <left flags="1" frequency="10" propId="557850711">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_BMS_SINGLECHRGENERGY" type="int"/>
+    <left flags="1" frequency="10" propId="557850712">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_VCU_IGON" type="int"/>
+    <left flags="1" frequency="10" propId="557850713">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_VCU_POWERSUPPLYVOLTAG" type="int"/>
+    <left flags="1" frequency="10" propId="557850714">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_VCU_MOTWATERPUMPSTATUS" type="int"/>
+    <left flags="1" frequency="10" propId="557850715">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_VCU_PTC1RELSTA" type="int"/>
+    <left flags="1" frequency="10" propId="557850716">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_VCU_PTC2RELSTA" type="int"/>
+    <left flags="1" frequency="10" propId="557850717">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_BMS_HEATRELAYSTATUS" type="int"/>
+    <left flags="1" frequency="10" propId="557850718">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_VCU_DCCHRGRLYSTS" type="int"/>
+    <left flags="1" frequency="10" propId="557850719">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_BMS_REALTIMEALOWDISCHAPOWER" type="int"/>
+    <left flags="1" frequency="10" propId="557850720">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_BMS_INITSTATUS" type="int"/>
+    <left flags="1" frequency="10" propId="557850721">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_BMS_HVBATTST" type="int"/>
+    <left flags="1" frequency="10" propId="557850722">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_BMS_SOE" type="int"/>
+    <left flags="1" frequency="10" propId="557850723">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_BMS_BATTERYSOH" type="int"/>
+    <left flags="1" frequency="10" propId="557850724">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_IPU_MAINRELAYPOSISTATUS" type="int"/>
+    <left flags="1" frequency="10" propId="557850725">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_BMS_MAINRELAYNEGA_STATUS" type="int"/>
+    <left flags="1" frequency="10" propId="557850726">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_BMS_BATTINFO4_DCCHARGREQCURR" type="int"/>
+    <left flags="1" frequency="10" propId="557850727">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_BMS_BATTINFO4_DCCHARGREQVOL" type="int"/>
+    <left flags="1" frequency="10" propId="557850728">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_BMS_BATTINFO4_MACHPUTVOLT" type="int"/>
+    <left flags="1" frequency="10" propId="557850729">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_BMS_BATTINFO4_MACHPUTCURR" type="int"/>
+    <left flags="1" frequency="10" propId="557850730">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_VCU_DCCHRGRLYSTS_NA" type="int"/>
+    <left flags="1" frequency="10" propId="557850731">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_BMS_DEG_DCCHARSOCKETTEMP2" type="int"/>
+    <left flags="1" frequency="10" propId="557850732">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_BMS_DEG_DCCHARSOCKETTEMP1" type="int"/>
+    <left flags="1" frequency="10" propId="557850733">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_IPU_DCDCREALTIMEOPVOLT" type="int"/>
+    <left flags="1" frequency="10" propId="557850734">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_IPU_DCDCREALTIMEOPCURR" type="int"/>
+    <left flags="1" frequency="10" propId="557850735">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_IPU_DCDCBODYTEMP" type="int"/>
+    <left flags="1" frequency="10" propId="557850736">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_IPU_WORKSTATUS" type="int"/>
+    <left flags="1" frequency="10" propId="557850737">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_IPU_IPUHVILSTA" type="int"/>
+    <left flags="1" frequency="10" propId="557850738">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_MCU_MOTOROPERMODE" type="int"/>
+    <left flags="1" frequency="10" propId="557850739">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_IPU_CPDUTYCYCLE" type="int"/>
+    <left flags="1" frequency="10" propId="557850740">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_IPU_OBCINPUTCURRENT" type="int"/>
+    <left flags="1" frequency="10" propId="557850741">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_IPU_OBCINPUTVOLTAGE" type="int"/>
+    <left flags="1" frequency="10" propId="557850742">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_IPU_OBC_OUTPUT_CURRENT" type="int"/>
+    <left flags="1" frequency="10" propId="557850743">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_IPU_OBC_OUTPUT_VOLTAGE" type="int"/>
+    <left flags="1" frequency="10" propId="557850744">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_VCU_WATERPUMPPWM" type="int"/>
+    <left flags="1" frequency="10" propId="557850745">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_VCU_FANRELAY_PINSTS" type="int"/>
+    <left flags="1" frequency="10" propId="557850746">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_VCU_TQREQ" type="int"/>
+    <left flags="1" frequency="10" propId="557850747">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_EAS_CRTPWR" type="int"/>
+    <left flags="1" frequency="10" propId="557850748">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_VCU_VACUMPUMPFAULT" type="int"/>
+    <left flags="1" frequency="10" propId="557850749">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_BCM_VEHALRMSYSST" type="int"/>
+    <left flags="1" frequency="10" propId="557850750">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_VCU_CHRGCNCTRSTS" type="int"/>
+    <left flags="1" frequency="10" propId="557850751">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_BCM_TRCLSST" type="int"/>
+    <left flags="1" frequency="10" propId="557850752">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_BCM_DRIVELOCKST" type="int"/>
+    <left flags="1" frequency="10" propId="557850753">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_CHRAGINGMODESP" type="int"/>
+    <left flags="1" frequency="10" propId="557850754">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_CCM_BATTMAINTAIN_CTR_CMD" type="int"/>
+    <left flags="1" frequency="10" propId="557850755">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_CCM_BATTMAINTAIN_STS" type="int"/>
+    <left flags="1" frequency="10" propId="557850756">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_CCM_VERSION" type="int"/>
+    <left flags="1" frequency="10" propId="557850757">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_CCM_SOC_SOFTWARE_NUM" type="int"/>
+    <left flags="1" frequency="10" propId="557850758">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_CCM_SOC_HARDWARE_NUM" type="int"/>
+    <left flags="1" frequency="10" propId="557850759">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_CCM_MCU_SOFTWARE_NUM" type="int"/>
+    <left flags="1" frequency="10" propId="557850760">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_CCM_MCU_HARDWARE_NUM" type="int"/>
+    <left flags="1" frequency="10" propId="557850761">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_CCM_TARGET_CHRG_CURR" type="int"/>
+    <left flags="1" frequency="10" propId="557850762">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_CCM_REMOTE_LOCK" type="int"/>
+    <left flags="1" frequency="10" propId="557850763">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_CCM_REMOTE_CAR_SEARCH" type="int"/>
+    <left flags="1" frequency="10" propId="557850764">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_CCM_REMT_CTR_FLAG" type="int"/>
+    <left flags="1" frequency="10" propId="557850765">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+  <item>
+    <right areaId="0" name="GECKO_CCM_OPERAT_LICENCE" type="int"/>
+    <left flags="1" frequency="10" propId="557850766">
+      <tranMode>2</tranMode>
+    </left>
+  </item>
+</items>

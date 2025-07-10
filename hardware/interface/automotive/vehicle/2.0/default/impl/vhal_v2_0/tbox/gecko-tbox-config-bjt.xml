@@ -1,0 +1,31 @@
+<config>
+  <tboxservicestartwait>20</tboxservicestartwait>
+  <localStorageCycle>1000</localStorageCycle>
+  <normalReportCycle>10</normalReportCycle>
+  <alarmReportCycle>1</alarmReportCycle>
+  <domainNameLen>13</domainNameLen>
+  <domainName>116.63.172.23</domainName>
+  <port>19006</port>
+  <hardwareVer>01.01</hardwareVer>
+  <firmwareVer>01.01</firmwareVer>
+  <heartbeatCycle>5</heartbeatCycle>
+  <terminalRespTimeout>10</terminalRespTimeout>
+  <platformRespTimeout>10</platformRespTimeout>
+  <loginRetryInterval>3</loginRetryInterval>
+  <publicDomainLen>12</publicDomainLen>
+  <publicDomain>c1.jenhoo.cn</publicDomain>
+  <publicPort>6638</publicPort>
+  <isSampling>2</isSampling>
+  <replenishmentCycle>360</replenishmentCycle>
+  <startvoltage>120</startvoltage>
+  <stopvoltage>138</stopvoltage>
+  <chargeMode>0</chargeMode>
+  <reservationMode>0</reservationMode>
+  <startHour>0</startHour>
+  <startMinute>0</startMinute>
+  <stopHour>0</stopHour>
+  <stopMinute>0</stopMinute>
+  <loopEnable>0</loopEnable>
+  <targetPower>100</targetPower>
+  <serviceControl>00000000</serviceControl>
+</config>
