@@ -17,7 +17,10 @@ print(f"正在使用的 cantools 版本 (Using cantools version): {cantools.__ve
 
 # 新增：用于批量报文推送的全局队列
 batch_send_queue = asyncio.Queue()
-
+def _is_cdc_sender(msg):
+    # 有些消息 senders 可能是空或 None，保险写法如下
+    return hasattr(msg, "senders") and isinstance(msg.senders, list) and msg.senders == ["CDC"]
+    
 async def can_message_generator(parser: DbcParser, can_message_map: Dict, map_lock: asyncio.Lock, 
                                update_queue: asyncio.Queue, stop_event: asyncio.Event):
     """
@@ -30,6 +33,8 @@ async def can_message_generator(parser: DbcParser, can_message_map: Dict, map_lo
             # 跳过诊断报文 (已经在filtered_messages中被过滤了，但这里再次检查以确保安全)
             if parser._is_diagnostic_message(message_id):
                 continue
+            if _is_cdc_sender(message):
+                continue
             if message_id not in can_message_map:
                 can_message_map[message_id] = {"data": b"", "signals": {}, "refresh_count": 0, "overrides": {}}
             elif "overrides" not in can_message_map[message_id]:
@@ -40,6 +45,8 @@ async def can_message_generator(parser: DbcParser, can_message_map: Dict, map_lo
     for message in parser.filtered_messages:
         message_id = message.frame_id
         if parser._is_diagnostic_message(message_id):
+            continue
+        if _is_cdc_sender(message):
             continue
         cycle_time = parser.get_message_cycle_time(message_id)
 
@@ -93,6 +100,11 @@ async def can_message_generator(parser: DbcParser, can_message_map: Dict, map_lo
                 print(f"Warning: Ignoring update for diagnostic message ID 0x{message_id:x}")
                 update_queue.task_done()
                 continue
+            msg_obj = next((msg for msg in parser.filtered_messages if msg.frame_id == message_id), None)
+            if msg_obj and _is_cdc_sender(msg_obj):
+                print(f"Warning: Ignoring update for CDC sender message ID 0x{message_id:x}")
+                update_queue.task_done()
+                continue
             async with map_lock:
                 if message_id in can_message_map:
                     can_message_map[message_id]["signals"].update(signals)
@@ -113,6 +125,96 @@ async def can_message_generator(parser: DbcParser, can_message_map: Dict, map_lo
     await asyncio.gather(*tasks, return_exceptions=True)
     print("CAN message generator stopped")
 
+async def simulate_script_executor(
+    script_path: str, 
+    parser: DbcParser, 
+    can_message_map: Dict, 
+    map_lock: asyncio.Lock, 
+    update_queue: asyncio.Queue, 
+    stop_event: asyncio.Event
+):
+    """
+    支持脚本节点同时设置多个 message_id。
+    每个 step 支持：
+    - message_id: int 或 [int, ...]
+    - signals: {msgid: {sig: val}, ...} 或 {sig: val}
+    - cycles: {msgid: {sig: cycle}, ...} 或 {sig: cycle}
+    - delay: float
+    """
+    if not os.path.exists(script_path):
+        print(f"[Simulate] Script file {script_path} not found.")
+        return
+
+    try:
+        with open(script_path, "r", encoding="utf-8") as f:
+            script = json.load(f)
+    except Exception as e:
+        print(f"[Simulate] Failed to load script: {e}")
+        return
+
+    if not isinstance(script, list):
+        print("[Simulate] Script must be a list of operations.")
+        return
+
+    print(f"[Simulate] Executing simulation script: {script_path}")
+
+    for idx, step in enumerate(script, 1):
+        try:
+            # --- 支持 message_id 为数组 ---
+            msg_ids = step.get("message_id")
+            signals = step.get("signals", {})
+            cycles = step.get("cycles", None)
+            delay = float(step.get("delay", 0))
+
+            # 自动兼容旧格式 message_id
+            if isinstance(msg_ids, int):
+                msg_ids = [msg_ids]
+                # signals 形式 {"sig":val}
+                sigs_map = {str(msg_ids[0]): signals} if signals else {}
+                cyc_map = {str(msg_ids[0]): cycles} if cycles else {}
+            elif isinstance(msg_ids, list):
+                # signals、cycles 必须为 {msgid: {...}}
+                sigs_map = signals
+                cyc_map = cycles if cycles else {}
+            else:
+                print(f"[Simulate] Step {idx}: invalid message_id, skipped.")
+                continue
+
+            # 遍历每个message_id
+            for mid in msg_ids:
+                midstr = str(mid)
+                sigs = sigs_map.get(midstr, {})
+                cycs = cyc_map.get(midstr, {}) if cyc_map else None
+                if not sigs:
+                    print(f"[Simulate] Step {idx}: message_id 0x{mid:x} no signals, skipped.")
+                    continue
+                if parser._is_diagnostic_message(mid):
+                    print(f"[Simulate] Step {idx}: message_id 0x{mid:x} is diagnostic, skipped.")
+                    continue
+                parser.validate_signal_values(mid, sigs)
+                async with map_lock:
+                    if mid not in can_message_map:
+                        can_message_map[mid] = {"data": b"", "signals": {}, "refresh_count": 0, "overrides": {}}
+                    can_message_map[mid]["signals"].update(sigs)
+                    # 设置周期
+                    for name, cyc in (cycs or {}).items():
+                        if cyc is not None:
+                            can_message_map[mid]["overrides"][name] = {
+                                "remain_cycles": cyc,
+                                "origin_value": 0
+                            }
+                    can_message_map[mid]["refresh_count"] += 1
+                await update_queue.put((mid, sigs, cycs))
+                print(f"[Simulate] Step {idx}: set 0x{mid:x} signals {sigs} cycles {cycs}")
+            # delay 为所有msg_ids共用
+            await asyncio.sleep(delay)
+            if stop_event.is_set():
+                print("[Simulate] Simulation stopped by user.")
+                return
+        except Exception as e:
+            print(f"[Simulate] Step {idx} error: {e}")
+    print("[Simulate] Simulation script execution finished.")
+
 async def console_handler(parser: DbcParser, can_message_map: Dict, map_lock: asyncio.Lock, 
                          update_queue: asyncio.Queue, stop_event: asyncio.Event):
     """
@@ -125,9 +227,12 @@ async def console_handler(parser: DbcParser, can_message_map: Dict, map_lock: as
     print("debug <id>                       - 调试消息属性")
     print("summary                          - 打印消息摘要")
     print("server_info                      - 显示服务器信息")
+    print("simulate <脚本文件路径>           - 按脚本文件批量执行信号设置及延迟")
     print("exit                             - 退出程序")
     print("help                             - 显示此帮助信息")
     print("=" * 50)
+
+    simulate_tasks = set()
 
     while not stop_event.is_set():
         try:
@@ -146,6 +251,7 @@ async def console_handler(parser: DbcParser, can_message_map: Dict, map_lock: as
                 print("debug <id>                       - 调试消息属性")
                 print("summary                          - 打印消息摘要")
                 print("server_info                      - 显示服务器信息")
+                print("simulate <脚本文件路径>           - 按脚本文件批量执行信号设置及延迟")
                 print("exit                             - 退出程序")
                 print("help                             - 显示此帮助信息")
                 print("=" * 50)
@@ -153,9 +259,10 @@ async def console_handler(parser: DbcParser, can_message_map: Dict, map_lock: as
                 parser.print_message_summary()
             elif command.lower() == "server_info":
                 print("Server running on 127.0.0.1:12345")
-            elif command.lower().startswith("debug "):
+            elif command.lower().startswith("debug "): 
                 parts = command.split()
-                if len(parts) >= 2:
+                if len(parts) == 2:
+                    # 原有: debug <id>
                     try:
                         message_id = int(parts[1], 16) if parts[1].startswith("0x") else int(parts[1])
                         if parser._is_diagnostic_message(message_id):
@@ -164,8 +271,35 @@ async def console_handler(parser: DbcParser, can_message_map: Dict, map_lock: as
                             parser.debug_message_attributes(message_id)
                     except ValueError:
                         print(f"Invalid message ID: {parts[1]}")
+                elif len(parts) == 3:
+                    # 新增: debug <id> <attr>
+                    try:
+                        message_id = int(parts[1], 16) if parts[1].startswith("0x") else int(parts[1])
+                        attr = parts[2]
+                        if parser._is_diagnostic_message(message_id):
+                            print(f"Warning: Message ID 0x{message_id:x} is a diagnostic message and has been filtered out")
+                            return
+                        # 从 filtered_messages 找对象
+                        msg_obj = None
+                        for msg in parser.filtered_messages:
+                            if msg.frame_id == message_id:
+                                msg_obj = msg
+                                break
+                        if msg_obj is None:
+                            print(f"Message ID 0x{message_id:x} not found.")
+                            return
+                        # 获取属性
+                        value = getattr(msg_obj, attr, None)
+                        if value is not None:
+                            print(f"Message 0x{message_id:x} attribute '{attr}': {value}")
+                        else:
+                            print(f"Attribute '{attr}' not found in message object.")
+                    except Exception as e:
+                        print(f"Error in debug command: {e}")
                 else:
-                    print("Usage: debug <message_id>")
+                    print("Usage: debug <message_id> [attribute_name]")
+                    
+                    
             elif command.lower().startswith("print_cycle_times"):
                 parts = command.split()
                 async with map_lock:
@@ -279,6 +413,25 @@ async def console_handler(parser: DbcParser, can_message_map: Dict, map_lock: as
                         print(f"Updated signals for ID 0x{message_id:x}: {signal_values} with cycles: {signal_cycles}")
                 except ValueError as e:
                     print(f"Error in edit command: {e}")
+            elif command.lower().startswith("simulate "):
+                # simulate <脚本文件路径>
+                parts = command.split(maxsplit=1)
+                if len(parts) < 2 or not parts[1]:
+                    print("Usage: simulate <脚本文件路径>")
+                    continue
+                script_path = parts[1].strip()
+                # 可支持并发多个simulate脚本任务
+                if stop_event.is_set():
+                    print("[Simulate] System stopping, cannot start simulation.")
+                    continue
+                task = asyncio.create_task(
+                    simulate_script_executor(
+                        script_path, parser, can_message_map, map_lock, update_queue, stop_event
+                    )
+                )
+                simulate_tasks.add(task)
+                # 自动清理已完成任务
+                task.add_done_callback(simulate_tasks.discard)
             else:
                 if command:
                     print("Unknown command. Type 'help' for available commands.")
@@ -348,7 +501,7 @@ async def can_message_batch_logger(
                                 # 数据没变化但计数器达到10，处理并重置计数器
                                 should_process = True
                                 no_change_counters[msg_id] = 0
-                                print(f"[BatchLogger] 0x{msg_id:x} no change for 10 cycles, processing")
+                                #print(f"[BatchLogger] 0x{msg_id:x} no change for 10 cycles, processing")
                             
                             if should_process:
                                 can_id_bytes = msg_id.to_bytes(2, "big")
